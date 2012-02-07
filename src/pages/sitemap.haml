@@ -1,0 +1,56 @@
+!!! Strict
+%html
+  -# current page reference
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# first-character prefix; use that for tertiary menu
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+
+    =partial('sitemap-partial', :locals => { :where => "main", :itemkey => "index"})
+    =partial('sitemap-partial', :locals => { :where => "main", :itemkey => "news"})
+    =partial('sitemap-partial', :locals => { :where => "main", :itemkey => "events"})
+    .element_wrapper
+      .side
+        =partial('sitemaptertiary-partial', :locals => { :location => @tag, :sub => "h"})
+      .main
+        %h2 History of the Hamlet of New Concord
+        %ul
+          %li An Inventory of the Historic Houses Known within New Concord
+          %li Information about the Historic Cemeteries in New Concord
+          %li State and Federal Historic District Designation for New Concord
+          %li Several Walking Tours In and Around New Concord
+          %li History of the New Concord Church Building
+    .element_wrapper
+      .side
+        =partial('sitemaptertiary-partial', :locals => { :location => @tag, :sub => "s"})
+      .main
+        %h2 History and Workings of the Society of New Concord
+        %ul
+          %li Full Text of the Official Bylaws of the Society of New Concord
+          %li Current Directors and Officers of the Society, with Contact Information
+          %li Membership Listing (Under Development)
+          %li Currently-constituted Committees, Their Duties and Their Members
+          %li Benefactors of the Society and Its Projects
+    .element_wrapper
+      .side
+        =partial('sitemaptertiary-partial', :locals => { :location => @tag, :sub => "g"})
+      .main
+        %h2 Pictures and Artworks Related to New Concord
+        %ul
+          %li Scenes of New Concord in Photographs
+          %li Photographs from New Concord's past (a few with explanations)
+          %li Artworks Related to New Concord
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "donate"})
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "faq"})
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "group"})
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "blog"})
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "sitemap"})
+    =partial('sitemap-partial', :locals => { :where => "top", :itemkey => "contact"})
+
+    =partial('footer-partial')

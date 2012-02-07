@@ -1,0 +1,44 @@
+# "item", "tooltip", "popup information" and "href" for each main menu item
+#  supplied to rkmenu_helper.rb
+
+- index:
+   item: Home
+   tooltip: SNC Homepage
+   popup: "the Society of New Concord Homepage&nbsp;"
+   ref: index.html
+   sitemapdesc: Home Page of the Society of New Concord
+
+- news:
+   item: News
+   tooltip: News about SNC
+   popup: "What's Happening with the Society&nbsp;"
+   ref: news.html
+   sitemapdesc: News of the Society of New Concord
+
+- events:
+   item: Events
+   tooltip: Upcoming Calendar of Events
+   popup: "Upcoming New Concord Society Social&nbsp;\rand Historical Events&nbsp;"
+   ref: events.html
+   sitemapdesc: Calendar of Upcoming Events
+
+- h_history:
+   item: History
+   tooltip: History of New Concord
+   popup: "History of the Hamlet, Historical Homes and Sites, our Historical District Designation&nbsp;"
+   ref: h_history.html
+   sitemapdesc: History of the Hamlet of New Concord
+
+- s_history:
+   item: Governance
+   tooltip: Governance and Origins of SNC
+   popup: "Bylaws, Officers, Comittees, Member List,&nbsp;\rBenefactors and Origins of the Society&nbsp;"
+   ref: s_history.html
+   sitemapdesc: History and Workings of the Society of New Concord
+
+- g_gallery:
+   item: Gallery
+   tooltip: Pictures related to New Concord
+   popup: "Photos and Artworks&nbsp;\rRelated to New Concord&nbsp;"
+   ref: g_gallery.html
+   sitemapdesc: Pictures and Artworks Related to New Concord

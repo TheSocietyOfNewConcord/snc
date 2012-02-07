@@ -1,0 +1,73 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Events Committee
+        %ul
+          -# pass regular HTML for list to work around HAML extra-space problem
+          <li>Sue Anderson, <em>chair</em></li>
+          <li>Jean Muth</li>
+          <li>Peter Newman</li>
+          <li>Arthur Nugent</li>
+          <li>Nancy Williams</li>
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Historic District Committee
+        %ul
+          <li>Don Harwood, <em>chair</em></li>
+          <li>Paul Veillette</li>
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Membership Committee
+        %ul
+          <li>Jeanne Bowerman, <em>chair</em></li>
+          <li>Nancy Williams</li>
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Greens Committee
+        %ul
+          <li>Steve Anderson, <em>chair</em></li>
+          <li>Don Harwood</li>
+          <li>Paul Veillette</li>
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Committee for New Concord Church Building 
+        %ul
+          <li>Paul Veillette, <em>chair</em></li>
+          <li>Steve Anderson</li>
+          <li>Rick Karpinski</li>
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Church Building Fundraising Committee
+        %ul
+          %li Daron Builta
+          %li Don Harwood
+          %li Mike Kelly
+          %li Peter Newman,
+          %li David Pearce
+          %li Eileen Rice
+
+    =partial('footer-partial')

@@ -1,0 +1,31 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Flyers and Announcements for <em>The Society of New Concord</em> events
+        %p Ea mei soluta dolores contentiones. Vim enim libris invenire ad, saperet constituam ex nam. Ut pri falli exerci, ei assentior gloriatur pro. Eum modo iuvaret ne. Convenire disputando ius ei. Fuisset tincidunt interpretaris mel ei, ferri essent scripta ei ius. Maiorum tibique noluisse at eos.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Paintings
+        %p Et vitae euripidis mei, et has veritus iudicabit conclusionemque. Vidit facilisi eam te, at has diam commodo scripserit, solum malis zzril et mea. Pro equidem fabellas ut, est mandamus inciderint delicatissimi ne. Eu altera pericula pri, ut autem perpetua ullamcorper has.
+
+        %p Ad quo augue necessitatibus. Sit fierent deleniti appellantur cu, virtute singulis qui et. Ad vim modus intellegam, id everti vidisse eripuit eam. Sit no simul perpetua reprimique, et nihil tractatos nec. Vel cu lorem blandit, utinam repudiandae in has.
+
+        %p Ea appareat ponderum voluptatibus his. Enim verear democritum quo no, mel ne invidunt salutandi urbanitas, commune invenire ne sed. Dolor numquam duo ea, eum equidem mediocritatem te. Omittam scaevola philosophia ut eos. Id zzril cotidieque delicatissimi per.
+
+    =partial('footer-partial')

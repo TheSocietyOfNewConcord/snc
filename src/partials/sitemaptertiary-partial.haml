@@ -1,0 +1,19 @@
+.tertiary_wrapper
+  .ternav
+    - infoext = YAML.load_file("src/helpers/tertiary_menu.yaml")
+    - info = infoext[sub + "_menu"]
+    =list_of(info) do |h|
+      - name = h.keys.first
+      - hash = h[name]
+      -# need to test current page against the hash key name
+      - @idval = location == name ? "current" : false
+      -# need to test current page somehow agains the hash key name
+      - @classval = hash["item"].split(' ').first == "return" ? "return" : false
+      -# sets "id" of %a unless "idval" is false
+      -#   in that case "id" is not set at all
+      %a{:href => hash["ref"], :title => hash["tooltip"], :id => @idval, :class => @classval}
+        - hashitem = hash["item"]
+        - hashpiece = hashitem[0,6]
+        - slug = (hashpiece == "return") ? "<br>&nbsp;</br>" : ""
+        = hashitem.split("return to ").to_s+slug
+        %span= hash["popup"]

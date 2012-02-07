@@ -1,0 +1,46 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 History of the Church Building
+        %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Early Congregations
+        %p Cum te nisl eros, lorem persequeris mediocritatem id qui. Impetus tractatos id duo, sea elit deterruisset no. Corpora dignissim et eam. Est fabulas utroque definiebas no, id nostro inciderint liberavisse sea. Dolorem electram salutandi ea per.
+        %p Eos diceret probatus appellantur in, no quo labitur molestiae. Te dicant noluisse qui. Vim cu solet dictas debitis, amet meliore cum no. Ad suavitate argumentum eum, cu qui minimum urbanitas, sea latine invenire consectetuer ea. In simul possit omittam mea, error quaestio disputationi ius an, cu reprehendunt delicatissimi duo.
+        %p Sint delicata ad pro. Eu mel nostrud periculis signiferumque, an vim deleniti scaevola quaestio. Cu quo eruditi dolorem facilisis, vitae aliquam vim ne, duo ea modo utroque periculis. Pro everti senserit at. Vel id fugit conceptam mnesarchum. Legimus vocibus qui te, habemus intellegat definitionem vis ad, sed an nostrum persecuti interesset.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Dutch Reform Church in Columbia County
+        %p Eum ne dicit invenire. An eum numquam tincidunt deseruisse. Pri eu scripta fastidii. Vix verear cotidieque an, eu mei vide altera. Et iudico reprimique nam, summo nihil postulant cu est. Sed no veri dignissim.
+        %p Pri te erat salutatus voluptatibus. No eum semper essent volumus. Timeam aliquam id est, est cu aperiam atomorum expetenda. Pro scriptorem disputando at, id errem alienum sed. In dico bonorum interesset eum, sea te illud volumus, quo et duis verterem.
+        %p Ex essent habemus fastidii vis. Molestiae prodesset cum ex, quaeque expetenda id pro. No munere omittam pro, vis decore officiis cu, novum euripidis ex sit. Dicit denique imperdiet ius an, cu sit tation veniam, audire vivendo ponderum vel et. Eu partem apeirian cum, no vix dico augue.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Society of New Concord and the Church/Community Hall Buildings
+        %p Nec cu democritum reformidans. Pro et doming officiis, ius cu ipsum aperiam adolescens. Per in tota dictas dissentiunt, ludus eripuit vim an. Ad duo inani honestatis contentiones. Possim fastidii argumentum cu eum.
+        %p Et est regione detracto, ius sint dicat reformidans id. Idque fugit tempor ius id, sit propriae expetendis eu. Odio wisi eius sea et. Omittam molestie mel ad, vix id affert partem deleniti, nam ancillae interesset ne. Pro legimus percipitur no, no nec apeirian iracundia moderatius.
+        %p Ex suas audiam appetere qui. In nibh malis accusata mea. Ex partem labitur qui. At eum invidunt maiestatis, et cum vide singulis indoctum, ex eum dolor vivendum. Amet lorem accommodare ne per, est ex pertinacia posidonium efficiantur.
+        %p Ad cum legere commune theophrastus, eos cu summo tempor. Id vis error erroribus comprehensam, ipsum iisque splendide mea ea, his perfecto accusata cu. Eu eros dolore dignissim ius. Vim ne alii nullam pericula, ius te discere feugiat eloquentiam. Quot commodo praesent no mea.
+
+    =partial('footer-partial')

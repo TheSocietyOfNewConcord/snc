@@ -1,0 +1,76 @@
+//**
+//  Susy: Fixed-Elastic-Fluid grids without all the math
+//  By: Eric A. Meyer and OddBird Collective
+//  Site: www.oddbird.net/susy/
+//**
+
+// FONT-SIZE
+// Override these values as needed (defaults are 12/18)
+
+$base-font-size: 16px;
+$base-line-height: 22px;
+
+// GRID
+// Set these values as needed for your grid layout.
+//  - defaults are shown.
+
+$total-cols: 12;
+$col-width: 60px;
+$gutter-width: 20px;
+$side-gutter-width: 0px;
+
+// OMEGA_FLOAT
+// By default, +omega elements are floated right.
+// You can override that globally here:
+
+// $omega_float: right
+
+// HACKS
+// Are you using hacks or conditional comments? Susy makes both possible.
+// Leave this as 'true' to use hacks, set it as false for conditional 
+// comments. Conditional comments will require overrides for +omega, 
+// +inline-block and several other mixins.
+
+// $hacks: true
+
+// SUSY
+// Don't move this @import above the GRID and FONT-SIZE overrides.
+
+@import "susy/susy";
+
+// COLORS
+// Set any colors you will need later.
+$base:                         black;
+$alt:                        #005498;
+$plain-text-color:              gray; //gray
+$logo-pale-color:             silver; //silver
+$logo-bright-color:          #32cd32; //limegreen
+$background-color:             white; //white
+$reverse-text-color:           white; //white
+$link-color:                   black; //black
+$link-hover-color:           $link-color;
+$link-visited-color:         $link-color;
+$emphasis-text-color:        #dc143c; //crimson
+$heading-text-color:         #696969; //dim gray
+$menu-explanatory-color:     #ff7c00; //tangerine
+$submenu-explanatory-color:  #e13000; //dark red
+$menu-color:                   black; //black
+$pagename-text-color:          black; //black
+$bullet-color:               $plain-text-color;
+$link-active-color:          $menu-explanatory-color;
+
+
+// FONTS
+// Give yourself some font stacks to work with.
+
+@mixin sans-family {
+    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif; 
+}
+
+@mixin serif-family {
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+// OTHER MIXINS
+// Mixins set here will be available in defaults, screen, print and IE
+// Or anywhere you import either base.sass or defaults.sass

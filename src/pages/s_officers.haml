@@ -1,0 +1,137 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 President
+        %h3 Steve Anderson
+      .main
+        %h2 Vice President
+        %h3 Rick Karpinski
+      .main
+        %h2 Secretary
+        %h3 Al Spangenberger
+      .main
+        %h2 Treasurer
+        %h3 Theresa Walker
+
+    .element_wrapper
+      .side
+        %h2 Term on Board: 2008, 2009, 2010
+      .main
+        %h2 Director
+        %h3 Steve Andersson
+        %p
+          2758 County Route  9
+          %br East Chatham, NY  12060
+          %br (518) 392-6671
+          %br sue.newconcord@gmail.com
+        %p 2008, 2009, 20010
+      .main
+        %h2 Director
+        %h3 Rick Karpinski
+        %p
+          2784 County Route 9
+          %br East Chatham, NY  12060
+          %br (518) 392-6910
+          %br (212) 977-9797
+          %br rhk1@columbia.edu
+        %p 2008, 2009, 20010
+      .main
+        %h2 Director
+        %h3 Bill Sohmer
+        %p
+          245 DeWitt Brown Road
+          %br East Chatham, NY  12060
+          %br (518) 392-7157
+          %br abigailhorticulture@gmail.com
+        %p 2008, 2009, 20010
+
+    .element_wrapper
+      .side
+        %h2 Term on Board: 2009, 2010, 2011
+      .main
+        %h2 Director
+        %h3 Karla Kavanaugh
+        %p
+          279 New Concord Road
+          %br East Chatham, NY  12060
+          %br (518) 392-4905
+          %br karlak@taconic.net
+        %p 2009, 2010, 20011
+      .main
+        %h2 Director
+        %h3 Maxine Rapoport
+        %p
+          323 New Concord Rd.
+          %br East Chatham, NY  12060
+          %br (518) 392-5616
+          %br maxinerappoport@yahoo.com
+        %p 2009, 2010, 20011
+      .main
+        %h2 Director
+        %h3 Al Spangenberger
+        %p
+          65 New Concord Road
+          %br East Chatham, NY  12060
+          %br (518) 392-7712
+          %br aspangenberger@ingraoinc.com
+        %p 2009, 2010, 20011
+
+    .element_wrapper
+      .side
+        %h2 Term on Board: 2010, 2011, 2012
+      .main
+        %h2 Director
+        %h3 Mike Kelly
+        %p
+          2698 County Route 9
+          %br East Chatham, NY  12060
+          %br (518) 392-1468
+          %br mike@hudsonunion.com
+        %p 2010, 2011, 2012
+      .main
+        %h2 Director
+        %h3 Jeanne Bowerman
+        %p
+          167 New Concord Road
+          %br East Chatham, NY  12060
+          %br (518) 392-9677
+          %br jeannevb@aol.com
+        %p 2010, 2011, 2012
+      .main
+        %h2 Director
+        %h3 Theresa Walker
+        %p
+          189 Elliot Road
+          %br East Chatham, NY 12060
+          %br (518) 392-7429
+          %br twalker@taconic.net
+        %p 2010, 2011, 2012
+
+    .element_wrapper
+      .side
+        %h2 Term on Board: Annual
+      .main
+        %h2 Historian 
+        %h3 Paul Veillette
+        %p
+          86 Elliot Road
+          %br East Chatham, NY  12060
+          %br (518) 392-4705
+          %br PTVeillette@aol.com
+        %p 2010
+
+    =partial('footer-partial')

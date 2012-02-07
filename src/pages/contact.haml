@@ -1,0 +1,50 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+      .main
+        %h2 e-Mail
+        %p
+          %a{:href => "mailto:societyofnewconcord@gmail.com", :title => "SocietyOfNewConcord@gmail.com"} SocietyOfNewConcord@gmail.com
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Surface Mail
+        %p
+          The Society of New Concord
+          %br P. O. Box 3
+          %br East Chatham, NY 12060
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Dues Payment
+        %p Dues may be paid at any of the several social functions sponsored by the Society of New Concord throughout the year.
+        %p Dues may also be mailed to our surface mail address (above), and may be paid online via our Pay-Pal Donate page.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Society of New Concord Google Group
+        %p
+          %a{:href => "http://groups.google.com/group/SocietyOfNewConcord", :title => "SNC Google Group" } Link to SNC Google Group
+    .element_wrapper
+      .side
+      .main
+        %h2 Website Corrections/Suggestions/Editorial Comments
+        %p
+          %a{:href => "mailto:rhk1@columbia.edu", :title => "rhk1@columbia.edu"} rhk1@columbia.edu
+
+    =partial('footer-partial')

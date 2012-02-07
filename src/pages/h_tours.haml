@@ -1,0 +1,63 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Tours
+        %p Id sumo maiestatis efficiantur cum. Ne his lorem diceret, at malis adolescens dissentiunt vix. At vix modo possim oblique, id alienum interesset deterruisset pro. Ut qui zzril democritum, nam ex utamur iracundia conceptam. Esse civibus vituperata pro in. Eam autem mnesarchum eu, ad cibo admodum sea, cum cu elitr contentiones.
+
+    .element_wrapper
+      .side
+        %h2 The Mountain View cemetery
+      .main
+        %h2 Tour
+        %p To be designed
+
+    .element_wrapper
+      .side
+        %h2 'Downtown' New Concord
+      .main
+        %h2 Tour
+        %p To be designed
+
+    .element_wrapper
+      .side
+        %h2 Cemetery to Cemetery
+      .main
+        %h2 Mountain View to DeWitt Brown
+        %p To be designed
+
+    .element_wrapper
+      .side
+        %h2 Along County Route 9
+      .main
+        %h2 Tour
+        %p To be designed
+
+    .element_wrapper
+      .side
+        %h2 Along New Concord Road
+      .main
+        %h2 Tour
+        %p To be designed
+
+    .element_wrapper
+      .side
+        %h2 Around the Block
+      .main
+        %h2 County 9, Daley Road, New Concord Road
+        %p To be designed
+
+    =partial('footer-partial')

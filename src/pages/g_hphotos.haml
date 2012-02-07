@@ -1,0 +1,159 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Sources
+        %p
+          The photos that are included here have come from Bob Herron, the force behind the
+          %a{:href => "http://www.oldausterlitz.org/", :title => "Old Austerlitz"}Austerlitz Historical Society
+          , from a trove found in the Clark/Campbell House, and from the collection of Mrs. Dorothy Mackerer.
+
+    .element_wrapper
+      .side
+        %h2 New Concord Church
+      .main
+        / thumbs are 150x113 px; hover thumbs (midsize) are 300x225 
+        %h2 Dutch Reformed Church
+        %a.thumbnail{:href => "images/Church-1full.jpg", :target => "_blank"}
+          %img{:src => "images/Church-1thumb.jpg", :alt => ""}/
+          %span.medium
+            %img{:src => "images/Church-1mid.jpg", :alt => ""}/
+            = @thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+        %p Magna nostrud consetetur ius ea, nonumy timeam mediocrem te usu, has nobis iisque et. Ornatus patrioque te vis, ut ullamcorper intellegebat mediocritatem his, mei euismod erroribus ad. Quo ut vidit simul, ei vidit dicunt vis, doctus oblique et sit. Sed velit civibus lobortis an, te accumsan epicurei sea, ne latine democritum qui.
+
+      .main
+        %a.thumbnail{:href => "images/Church-2full.jpg", :target => "_blank"}
+          %img{:src => "images/Church-2thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/Church-2mid.jpg", :alt => ""}/
+            =@thumbmess
+
+      .main
+        %a.thumbnail{:href => "images/Church-3full.jpg", :target => "_blank"}
+          %img{:src => "images/Church-3thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/Church-3mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/Church-4full.jpg", :target => "_blank"}
+          %img{:src => "images/Church-4thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/Church-4mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/Church-5full.jpg", :target => "_blank"}
+          %img{:src => "images/Church-5thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/Church-5mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+    .element_wrapper
+      .side
+        %h2 East Chatham Scenes
+      .main
+        %a.thumbnail{:href => "images/EastChatham-1full.jpg", :target => "_blank"}
+          %img{:src => "images/EastChatham-1thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/EastChatham-1mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/EastChatham-2full.jpg", :target => "_blank"}
+          %img{:src => "images/EastChatham-2thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/EastChatham-2mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/EastChatham-3full.jpg", :target => "_blank"}
+          %img{:src => "images/EastChatham-3thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/EastChatham-3mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/EastChatham-4full.jpg", :target => "_blank"}
+          %img{:src => "images/EastChatham-4thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/EastChatham-4mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+      .main
+        %a.thumbnail{:href => "images/EastChatham-5full.jpg", :target => "_blank"}
+          %img{:src => "images/EastChatham-5thumb.jpg", :alt => ""}/
+          %span
+            %img{:src => "images/EastChatham-5mid.jpg", :alt => ""}/
+            =@thumbmess
+        %p Lorem ipsum et usu feugiat invidunt splendide. Clita nostrum usu ad, sed omnium sanctus ex, ut mei admodum concludaturque. Te quem suavitate sit, eos probatus pericula ex. Usu epicuri noluisse similique no, usu id inani moderatius, in est tantas sensibus. Ei ferri sententiae moderatius has, no vivendo petentium expetendis cum.
+
+    =partial('footer-partial')
+
+    -#
+
+
+      historic-8
+      historic-9
+      historic-11
+
+      NewConcordFall.tiff
+      untitled 20040831 065713
+      untitled 20040831 065718
+      untitled 20040831 065722
+      untitled 20040831 065801
+      untitled 20040831 065814
+      untitled 20040831 065830
+      untitled 20040831 065852
+      untitled 20040831 065914
+      untitled 20040831 065926
+      untitled 20040831 065932
+      Westchester-1
+
+      Church:
+      Church-1,2,3,4,5
+
+      Streetscapes:
+      AlbanyTurnpike-1
+      County9Northward-1
+      NewConcordRoad-1
+      NewConcordRoadWestward-1
+      ElliotRoad-1
+
+      NewConcordHouses:
+      AnsonPrattHouse-1,2,3
+      CharlesLovejoyHouse-1
+      ClarkCampbellHouse-1,2,3,4
+      DewittBrownRoad-1
+      HezekiahLovejoyHouse-1
+      OrlandoBAllenHouse-1
+      Parsonage-1,2,3
+      SayreHouse-1-1
+      SayreHouse-1
+      SayreHouse-2
+      House2695NCR-1,2,3,4
+
+      East Chatham Scenes:
+      EastChatham-1,2,3,4,5
+

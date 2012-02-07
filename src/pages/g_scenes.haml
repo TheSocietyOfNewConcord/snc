@@ -1,0 +1,31 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Photographs
+        %p An tota graecis per, usu in conceptam disputationi. Choro accumsan inimicus an vis, eos no zzril labitur. Vero probo similique id nec, eripuit aliquid eos et, usu phaedrum adipiscing theophrastus ad. An eum essent verterem deseruisse. Velit dicunt dolorem ea mel, cum at puto malorum ancillae. Mea no agam intellegat democritum. Sea quem nemore incorrupte ne, ius dicam detracto hendrerit id.
+        %p Cu magna legendos expetendis his, dicam soluta aliquando mel ut. Id eam velit fastidii, pri ne graece denique honestatis. Lorem omnium per ea, eros corrumpit te mea, mei nihil accusam commune eu. Et atomorum accusamus voluptatibus duo, option nominati mnesarchum eam id. Tempor detracto quo an, has at posse mundi.
+        %p Eu sit vero exerci. Mazim verterem inciderint qui no. Clita persius cu est, brute putant et mei, te sed utinam vocent comprehensam. Eos in fabulas labores repudiandae. Decore veritus mei eu, aeque laoreet eam in, est at mutat quidam. Sed adhuc rationibus an, quo ne dolore cetero.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 More Photographs
+        %p Atomorum electram assentior his ut, vel tantas expetendis ei. Duo ne dicunt persecuti referrentur, mel eros rebum invenire cu. In pri suas adversarium, et pro recteque honestatis temporibus. At mea viderer repudiare, vel paulo zzril persecuti et, ex puto habeo iudico mei. Eam in porro idque, an iuvaret oportere appellantur vis. Graeci dictas efficiendi sit an, no saepe putent per, duo ut congue legendos.
+        %p Ea mazim nusquam appareat ius, duo dicunt oportere an, et per error veniam audiam. Mei eligendi maluisset molestiae an. In quod reque placerat sit. Ad paulo habemus delectus eum, at vel tantas delectus expetendis.
+        %p Et nam eruditi dolores deterruisset, everti accumsan voluptua id ius. Liber doctus senserit sed ad, utinam vidisse no sea. Quaeque eripuit definitiones sit te. Mel puto velit eloquentiam te. At eros sonet aliquando quo.
+
+    =partial('footer-partial')

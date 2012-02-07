@@ -1,0 +1,276 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Architecture
+        %p The architecture of New Concord reflects its Connecticut colonial heritage. The designs of New Concord homes  range from the simple "Connecticut Cape Cod" of Daniel Lovejoy (c.1830, or earlier), across from the  Green, a style common in Kent, to the much more elaborate Federal-Georgian style house nearby, built by Anson Pratt (1802-1812) to a design created by the Adam brothers. A similar, but more modest, Adam house, owned by a relative, Azariah Pratt, exists in Kent.
+        %p 
+          The writeups that follow are taken almost verbatim from Veillette,
+          %em An Early History of New Concord
+          (1993), 161 pages, Chatham Public Library. The author warns that he has not attempted to verify the lineage of each house in Columbia County's property records in Hudson, but has looked at the available historical records to identify the early owners. Often, early houses were built as small units and subsequently enlarged; modern owners have frequently renovated them extensively.
+        %p In a few instances, house owners have provided historical tidbits or architectural notes.
+
+    .element_wrapper
+      .side
+        %h2 New Concord Road
+      .main
+        / house thumbs are 150x113 px; hover thumbs (midsize) are 300x225 
+        %h2.no 144
+        %h3 The Major Martin Beebe House
+        =partial('photo3-partial', :locals => { :photoname => "0-NCR-144-7" })
+        %p Major Beebe (b.1738, d.1783), son of New Concord's founding patriarch, John Beebe, and Ruth Pratt, was the first Clerk of the King's District (later Canaan) in 1772; Town Supervisor intermittently from 1774 to 1782; a Revolutionary War Major in the Albany County Militia and a signer of the District's Declaration of Independence (1776). Local legend says he and his wife, Dorcas (Judson) (Hurd) Beebe lived here when her daughter Azubah Hurd, the wife of Abel Eaton, gave birth here to Amos Eaton, the first President of the Rensselaer Polytechnic Institute.
+        %p It is possible, however, that this is the home that was rebuilt in 1837 after the original home of Major Beebe&mdash;inherited by his son, Deacon Martin Beebe&mdash;was destroyed by fire in 1837. Deacon Beebe was Overseer of Highways for Beat #16 in 1831&mdash;the beat on which this home was located. [Owner: L. Liben]
+
+      .main
+        %h2.no 218
+        %h3 The Bartlet's Inn Carriage House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-218-4" })
+        %p Bartlet's Inn was across the road and was visible on early photos of New Concord Road. This structure--built in 1824--remained a carriage house until the early 1900s when it was converted to a summer cottage. The home has been expanded and refurbished by the current owners; it boasts some original hand-hewn chestnut beams, and the original carriage house structure remains as the center core of the house. [Owners: Peter Newman and Kevin Weldon.]
+
+      .main
+        %h2.no 225
+        %h3 The Sylvester Van Volkenburgh House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-225-1" })
+        %p New Concord Road near the Green. Local sources estimate that Sylvester Van Volkenburgh (b.1794, d.1875) and his wife, Lucy Pratt, daughter of Anson and Sally (Beebe) Pratt, lived here in the early to mid-1800s. The home is located between the Publick House of Bartlett Van Valkenburgh (Sylvester's brother) and the home of Lucy's parents. Sylvester served as a School Inspector (1817 and 1819) and, in 1820, as a Commissioner of Schools (with his father-in-law) and as a beatmaster.
+        %p After Lucy died, at age 29, Sylvester married Mary Chesterman (b.1804, d.1887) and moved to Chatham Centre, where the couple is buried. Lucy rests near her parents in the New Concord cemetery. [Owner: Richard Charnoff]
+
+      .main
+        %h2.no 248
+        %h3 The Ahira Palmer House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-248-1" })
+        %p This classic Cape Cod house, facing The Green, was built about 1780 and has had wings added in each of four centuries; the gardens have been significantly upgraded by the current owners.
+        %p A son of Captain Joshua Palmer, Ahira (b.1787, d.1878) was one of the five "under 16" males counted in his father's New Concord household in the first U.S. census (1790). He served as Chatham Town Constable from 1813 to 1814, and, together with his wife Lucy (b.1791, d.1873), was a member of the New Concord Congregational Church as early as 1816, resigning a year before it became Dutch Reformed (1856). The 1871 Columbia County Directory identifies the then 84-year-old Ahira as a retired hatter. [Owners: Saul and Naomi (Nomi) Cohen]
+
+      .main
+        %h2.no 323
+        %h3 The Captain Joshua Palmer House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-323-1" })
+        %p Coming from Stonington, CT, Captain Palmer is recorded as a Canaan (New Concord section) resident in the first (1790) U.S.Census. Earlier, he was captain of a small privateer sloop operating out of Stonington during the Revolution, and served as an officer on the U.S.S. Constitution. The original house perished in a fire but was rebuilt. In 1795, the Town of Canaan's minutes identified the location of Palmer's property in a road description; in 1801 he is mentioned as a pathmaster on Captain Darrow's beat. [owners: Daniel and Maxine Rapoport]
+
+      .main
+        %h2.no 514
+        %h3 The Dr. Patrick Hamilton/Hezekiah Booth House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-514-1" })
+        %p New Concord Road/Sayre Hill Road. A resident of the King's District (Canaan) no later than 1779, when he was elected an Assessor, Dr.Hamilton (b.1752, d.1812) served as a military surgeon during the Revolution. He is listed in the 1790 U.S. census, and was Canaan Town Supervisor in 1793, moving later to Catskill, where he became a Common Pleas Court Judge. It is likely that the house was built or expanded between 1794, when Hamilton sold his property for 100 pounds to Hezekiah Booth, and 1801, when it was sold to Philo Kilbourn for 1,300 pounds. In 1781, Dr.Hamilton had signed the Covenant of the reorganized New Concord Congregational church. [present owners: Darryl and Patricia Vigon. Immediate past owner: U.S. Judge Lawrence W. Pierce, 2nd Circuit Court, New York city.]
+
+      .main
+        %h2.no 669
+        %h3 The Betsey Curtis Bradley House
+        =partial('photo3-partial', :locals => { :photoname => "0NCR-669-2" })
+        %p Little is known of the early owners of this Adam-style house, a less elaborate version of the Anson Pratt House, located past Sayre Hill Road toward County Rte. 5, and backed up against I-90. The best local source believes that Betsey (Eliza) Curtis (b.1798, d.1881) lived here at the time of her marriage to Norman Bradley. She was baptized in the New Concord Church on September 3, 1820, and had a daughter, Sally Mariah, baptized there on November 4, 1827. She was still a member of the Church on November 5, 1856, when she was one of the petitioners requesting the Dutch Reformed Church to admit the New Concord Congregational communion into membership. In January 1821, her sister Sally married Norman Bradley's brother Seth, who was excommunicated in 1826 by the forces of the Reverend Joel Benedict during his struggle against the Beebe family. The two sisters were still communicants, however, as late as 1856. The second floor houses the "Loom Room," a room extending the width of the house, in which neighboring women congregated to spin thread and weave cloth. The Palladian window is at the center of the room. [Owner: Paul Barletta]
+
+    .element_wrapper
+      .side
+        %h2 County Route 9
+      .main
+        %h2.no 2575
+        %h3 The Hosea Pratt House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2575-1" })
+        %p Hosea Pratt (b.1799, d.1888), son of Anson and Sally Pratt, left the area after graduation from Union College in 1826 and became a businessman in Macon, Georgia under the name of Cook &amp; Pratt. He returned to New Concord in 1844 and farmed for the remainder of his life. The first New Concord burial ground (no longer existing) and the first Meeting House, an interdenominational (Congregationalist and Anglican) log structure, were located on the property near the house. [Owners: XXXX.]
+
+      .main
+        %h2.no 2659
+        %h3 Knollcroft
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2659-5" })
+        %p
+          Built in 1880 by George Chesterman, a wealthy New York financier, as a summer home, the site was sold to Chesterman by Judge Welcome Beebe in 1861. The Judge gave the property its name,
+          %em Knollcroft
+          \. The house replaced an earlier Chesterman house destroyed by fire in 1880. According to an 1873 map, that house was located on New Concord Road, but, forty years ago, an elderly daughter of the Chestermans' caretaker claimed firmly that the destroyed house rested on the same site as its replacement. The first house featured a Mansard roof, and is pictured on page 287 of Ellis'
+          %em History of Columbia County
+          \.
+        %p Following the Chestermans, the (new) house was owned by Henry Bedlow (1897), a relative of the original owners of Bedloe's Island and Mayor of Newport, RI; by General Edward O'Brien (1902), Dock Commissioner of New York and Minister to Paraguay; and by Robert MacFarland (1904), a member of the St.Lawrence Seaway Commission. The house, a classic Victorian, is listed on the National Historic Register. [Owners: Gerald and Ginell Subak-Sharpe]
+
+      .main
+        %h2.no 2668
+        %h3  House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2668-4" })
+        %p Martis erat primus mensis, Venerisque secundus, haec generis princeps, ipsius ille pater. Tertius a senibus, juvenum de nomine quartus, quae sequitur numero turba notata fuit. At Numa nec Janum, nec avitas praeterit umbras, mensibus antiquis apposuitque duos.
+        %p Tempora digereret quum conditor urbis, in anno constituit menses quinque bis esse suo. Scilicet arma magis, quam sidera, Romule, horas, curaque finitimos vincere major erat. Est tamen et ratio, Caesar, quae moverit illum, erroremque suum quo tueatur habet. Quod satis est utero matris dum prodeat infans, hoc anno statuit temporis esse satis. Per totidem menses a funere conjugis uxor sustinet in vidua tristia signa domo. Hoc igitur vidit trabeati cura Quirini, quum rudibus populis annua jura daret. 
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.          %p [Owner: Beau Fraser.]
+
+      .main
+        %h2.no 2675
+        %h3  Clark Campbell House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2675-2" })
+        %p Martis erat primus mensis, Venerisque secundus, haec generis princeps, ipsius ille pater. Tertius a senibus, juvenum de nomine quartus, quae sequitur numero turba notata fuit. At Numa nec Janum, nec avitas praeterit umbras, mensibus antiquis apposuitque duos.
+        %p Tempora digereret quum conditor urbis, in anno constituit menses quinque bis esse suo. Scilicet arma magis, quam sidera, Romule, horas, curaque finitimos vincere major erat. Est tamen et ratio, Caesar, quae moverit illum, erroremque suum quo tueatur habet. Quod satis est utero matris dum prodeat infans, hoc anno statuit temporis esse satis. Per totidem menses a funere conjugis uxor sustinet in vidua tristia signa domo. Hoc igitur vidit trabeati cura Quirini, quum rudibus populis annua jura daret. 
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.          %p [Owners: James Bleeker and Jenny Ferrier]
+
+      .main
+        %h2.no 2689
+        %h3 New Concord Reformed Church
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2689-4" })
+        %p The successor to an earlier Congregational church on this same site that was moved to East Chatham (a building lost through mortgage foreclosure and sold to Methodists), this church was built on Elliot Road in 1838 as the replacement Congregational Church. It was moved to this location, regarded as a return to "sacred ground," piece by piece, in 1857, the year after the congregation merged with the Dutch Reformed Church. The congregation was initially organized c.1764, and shared a log Meeting House with Anglicans at the juncture of Daley Road and County Route 9. The 1781 date that hung on the church sign for years, referred to the date of the first church reorganization (the pre-1781 church records were destroyed in an 1837 fire). A wing of the building, constructed post-World War II (complete with kitchen), served as the New Concord community hall until the church was closed in early 2009.
+
+      .main
+        %h2.no 2695
+        %h3  House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2695-1" })
+        %p Martis erat primus mensis, Venerisque secundus, haec generis princeps, ipsius ille pater. Tertius a senibus, juvenum de nomine quartus, quae sequitur numero turba notata fuit. At Numa nec Janum, nec avitas praeterit umbras, mensibus antiquis apposuitque duos.
+        %p Tempora digereret quum conditor urbis, in anno constituit menses quinque bis esse suo. Scilicet arma magis, quam sidera, Romule, horas, curaque finitimos vincere major erat. Est tamen et ratio, Caesar, quae moverit illum, erroremque suum quo tueatur habet. Quod satis est utero matris dum prodeat infans, hoc anno statuit temporis esse satis. Per totidem menses a funere conjugis uxor sustinet in vidua tristia signa domo. Hoc igitur vidit trabeati cura Quirini, quum rudibus populis annua jura daret. 
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %p [Owners: Frank and Jean Muth]
+
+      .main
+        %h2.no 2698
+        %h3  Parsonage
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2698-1" })
+        %p Martis erat primus mensis, Venerisque secundus, haec generis princeps, ipsius ille pater. Tertius a senibus, juvenum de nomine quartus, quae sequitur numero turba notata fuit. At Numa nec Janum, nec avitas praeterit umbras, mensibus antiquis apposuitque duos.
+        %p Tempora digereret quum conditor urbis, in anno constituit menses quinque bis esse suo. Scilicet arma magis, quam sidera, Romule, horas, curaque finitimos vincere major erat. Est tamen et ratio, Caesar, quae moverit illum, erroremque suum quo tueatur habet. Quod satis est utero matris dum prodeat infans, hoc anno statuit temporis esse satis. Per totidem menses a funere conjugis uxor sustinet in vidua tristia signa domo. Hoc igitur vidit trabeati cura Quirini, quum rudibus populis annua jura daret. 
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %p [Owners: Mike Kelly and Adrien Glover]
+
+      .main
+        %h2.no 2705
+        %h3 The Anson Pratt House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2705-5" })
+        %p County Route 9/New Concord Road, near the Green. Built c. 1802-1812 by Anson Pratt (b.1771, d.1841), or perhaps as early as 1797, the house adheres to the Georgian/Federal period designs of the Adam brothers, 18th century scottish architects, and is listed on the National Historic Register. Pratt might have lived in a combined residence and store on the northeast corner of his property (a building destroyed by fire in 1838) before the house pictured was completed. Hosea Beebe, the father of Pratt's wife, Sally (b. 1775, d. 1849), lived across the road. Pratt owned a grist mill in the Canaan portion of East Chatham, served as Chatham Town Clerk in 1798, as a beatmaster in Canaan in 1800 and in Chatham (#9) in 1801, as a member of the State Assembly (1800, 1807 and 1810) and as Chatham Town Supervisor (1817). The house is an elaborate version of one owned by a Pratt relative, Azariah Pratt, still standing in the Flanders Historic District of Kent, CT, off Route 7, next to the former home of John Beebe, Jr. [Owners: Steven Schaible and Daron Builta]
+
+      .main
+        %h2.no 2706
+        %h3 The Charles Lovejoy House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2706-2" })
+        %p Its owner, Charles W. Lovejoy (b.1813, d.1876) was appointed New Concord Postmaster in 1872, and operated the Post Office and a store from this house until his death four years later. Earlier, his older brother, Daniel, who died in 1845, had also been the Postmaster and a storekeeper, but at the juncture of Elliot Road and County Rte. 9. New Concord had its own Post Office from 1826 until 1900. Charles was admitted to the New Concord Congregational Church in 1838, and when the Church became Dutch Reformed, in 1856, was chosen one of the original Consistory Elders. He was married to Tryphena Cady (b.1816, d.1901), and was the son of Ebenezer Lovejoy (1777-1857) and Sarah Sylvia Beebe (1774/75-1867) and the grandson of Captain Daniel Lovejoy (1738/39-1795) and Prudence Cady (1740-1824), members of the first group of New Concord settlers. [Owner: Bridget Sisk]
+
+      .main
+        %h2.no 2714
+        %h3 The Hosea Beebe House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2714-3" })
+        %p across from the Green at the juncture of County Route 9 and New Concord Road. Built in 1785 by Hosea Beebe (b.1751, d.1827), grandson of John Beebe, Sr., patriarch of New Concord's settlers, and son of John Beebe, Jr. , Esq., a Justice of the Peace and diarist, a store and tavern existed in a north room (1786) . Hosea had served as a tax collector (1781) and as an assessor (1792) for Canaan, and when Chatham was separated from Canaan (1795) served as Chatham's first assessor. A Revolutionary War veteran, he was a Chatham Justice of the Peace from 1796 to 1808 and again from 1813 to 1815. Around 1800, he "owned" a slave. He was the father-in-law of Anson Prat. The pre-New Concord homes of Beebe's grandfather and father are still standing across from each other on Studio Hill Road, off Route 7, in Kent, CT, the latter now the office of the Kent Historical Society. [Owners: Frank and Louise Wallace. Immediately preceding owners: Lewis and Bernice Grabow (he the informal "mayor of New Concord")]
+
+      .main
+        %h2.no 2721
+        %h3 The Publick House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2721-3" })
+        %p County Route 9, across from the Green at the corner of Elliot Road. Bartlett Van Valkenburgh/Volkenburgh (d.1841) provided services to the stagecoach-traveling public here and to men carting pig iron from Richmond, MA to Hudson. He also served as a School Inspector in 1819, a School Commissioner in 1827, and as Overseer of Highways for most of the period from 1819 (with Hosea Beebe) to 1830 for the roadbeat on which the house is located. Andrew Lovejoy (b.1781, d.1843), a New Concord Church Elder and son of Capt. Daniel Lovejoy, purchased the property, the "Concord farm," in 1836 from mortgagor John C. Hogeboom and sold it in 1841 to R.F.Gardner. Lovejoy was married twice: first to Sarah Hurlburt (b.1781, d.1828) and then to Polly Niles (b.1788, d.1876). The land seems to have been owned originally by the (Congregational) Society of New Concord. [Owners: Rusty Vasac. Immediate past owners: Dorothy (Mrs. Allen) O'Hare for many years]
+
+      .main
+        %h2.no 2732
+        %h3 The Hezekiah Lovejoy House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2732-2" })
+        %p across from the Green on County Rte. 9. Hezekiah (b.1819, d.1906) was the grandson of Captain Daniel Lovely (b.1738/39, d.1795), one of the first settlers of New Concord, and the son of Andrew and Sarah (Hurlburt) Lovejoy. He joined the New Concord Congregational Church in 1838, became an Elder in the first Consistory of the Dutch Reformed Church of New Concord in 1856, and was a trustee of the New Concord Cemetery (Mountain View) when it was formed in 1866. His wife, Phoebe Evens Tompkins (b.1822, d.1901), was the daughter of Thomas and Lydia Tompkins, owners of the property previously owned by Capt. Joshua Palmer on New Concord Road. Hezekiah's house appears to rest on land once owned by Captain John Darrow, who died in 1813. [Owners: Don Harwood and Courtney Hunt]
+
+      .main
+        %h2.no 2758
+        %h3 The Orlando B.Allen/James A.Housman House
+        =partial('photo3-partial', :locals => { :photoname => "1CR9-2758-1" })
+        %p
+          Directly south of the Mountain View Cemetery, the house is on land deeded by the estate of Captain John Darrow (d. 1813) to mortgagor John C. Hogeboom in 1813. An 1851 map does not show a house as existing on the property, but an 1873 map shows one belonging to Orlando B. Allen (b.1820, d. 1895). Two years earlier, the 1871 Columbia County Directory identified Allen as a New Concord farmer (later he ran a hardware store in what is now East Chatham's
+          %em Classic Country
+          shop). He was a Deacon of the first Consistory of the New Concord Reformed Church (1856) and a member of the first governing board of the New Concord cemetery (1866).
+        %p
+          Later, as revealed by an 1888 map, Allen's farm was owned by James A. Housman (b.1843, d.1888) and his wife Anna, who seem to have acquired it from a wealthy New York relative, Charles H. Housman (the son-in-law of Sylvester Van Volkenburgh and Mary Chesterman). After his rambling 20-room house (a few buildings south of the Church) was destroyed, Charles Housman and his wife Emma moved to Valatie (his Valatie mansion is pictured on page 227 of Ellis' 1878
+          %em History of Columbia County
+          ). In the 1871
+          %em Directory
+          , he is listed as a retired resident of New Concord. Inheritors of the James Housman house included two sons, William H. (b.1879, d.1934), an inventor and Chatham merchant, and Walter Pierce Housman, a horseman and presumed gold speculator, who was the first Master of the East Chatham Grange when it was formed in 1906. In the early years of the 20th Century, the property was known as 'Fair Hope Farm' [Owners: Steven and Susan Anderson. Immediate past owners: Maurice and (son) Paul Arrighi, whose family, prior to 1992, owned the farm for 65 yearsJ
+
+    .element_wrapper
+      .side
+        %h2 Daley Road
+      .main
+        %h2.no 122
+        %h3 The William Tetherly House
+        =partial('photo3-partial', :locals => { :photoname => "2DR-122-1" })
+        %p The home of New York city artist William Tetherly (b. 1809, d. 1895), it is identified as such in an 1851 map. He allegedly moved to New Concord shortly before that date to do the interior decoration for the newly constructed Alexander Hulbert House. A controversial figure, he was accused of having Confederate sympathies during the Civil War. In an 1873 map, his property is shown as bordering the land of C. and J. Daley (after whom Daley Road was named)&mdash;land previously belonging to John Beebe, Sr. (b.1701, d.1788), the "patriarch" of New Concord. It is not clear whether the Tetherly house itself is located on former Beebe land. The New Concord home of Beebe has long since disappeared, but his earlier "mantion" in Kent, CT is still standing just off Route 7. [Owner: David Laskin]
+
+      .main
+        %h2.no 226
+        %h3 The Allis/Colbert House
+        =partial('photo3-partial', :locals => { :photoname => "2DR-226-2" })
+        %p Daley Road/county Route 9. Local accounts estimate this house was built c. 1820, belonging originally to Justin Allis (b.1781, d.1865), a member of the now-defunct Christian Church of Red Rock in 1858, who moved here from Summers (Somers), CT. He is buried in the Red Rock Rural Cemetery. In 1866, the property was purchased from Samuel and Elizabeth Allis by Lawrence Colbert, an immigrant from Ireland, whose four grandchildren John, Lawrence, Mary and Harold lived in the farmstead from birth to death (they never married). At one time, the Colberts owned and farmed 1,000 acres. At the time the last Colbert died (John, 1982), the property had been occupied continuously by the Colbert family for 116 years. John left $300,000 to St.James R.C.Church in Chatham. On February 17, 1993, the house suffered a major fire, but was rebuilt. [Owner: Brooklyn civil Court Judge Peter Wendt]
+
+    .element_wrapper
+      .side
+        %h2 DeWitt Brown Road
+      .main
+        %h2.no 256
+        %h3 The Alexander Hulbert House
+        =partial('photo3-partial', :locals => { :photoname => "3DBR-256-1" })
+        %p Ownership of the land and an earlier house passed to Alexander Hulbert (b.1816, d.1894) from Sally Smith (b.1785, d.1855) around 1850. She was the daughter of Alexander smith, Esq., an early New Concord settler. Subsequently, the house was razed by fire and a new one built in the Greek Revival style. The interior decoration was done by William Tetherly, a New York city artist. An 1851 map identifies the Hulbert home, but it is uncertain whether it was the new or the old house. Local lore maintains that Daniel B. Davis (b.1802, d.1884), a New Concord carpenter and member of the New Concord Church (1856), constructed the new house.
+        %p Later, it belonged to Dewitt Brown (b.1824, d.1886); it is shown on an 1888 map as being owned by the Brown Estate. In 1843, Hulbert was a trustee of the Methodist Society when it bought the New Concord Congregational Church from mortgagor Anson Pratt (later moving it to East Chatham). Alexander Smith (b.1748, d.1825) was listed on the 1779 tax list of the King's District, served as a Fenceviewer (1807) and Overseer of Highways (1812, 1816) for Chatham Beat #16, and as a Chatham Town constable (1812). He was a charter member (1796) and Master of New Concord's Masonic Lodge #44. King's District records (1790) and Chatham town records (1819) locate his property near the original log Meeting House (juncture of Daley Road and County Route 9). [Owner: R.Paige Donhauser]
+
+    .element_wrapper
+      .side
+        %h2 Percy Hill Road
+      .main
+        %h2.no 125
+        %h3 The Abel/Amos Eaton House
+        =partial('photo3-partial', :locals => { :photoname => "4PHR-125-1" })
+        %p
+          Originally located on Route 295, near Taconic State Parkway, the house was moved to its present site in August 1990. In 1776, it was the home of Abel and Azubah (Hurd) Eaton. Local folklore claims that Mrs. Eaton, in labor, walked a mile to the home of her mother, Dorcas (Judson, Hurd) Beebe, wife of Major Martin Beebe, to give birth to Amos Eaton, who, upon graduation from Williams College in 1799, became an attorney, a surveyor and the first President of Rensselaer polytechnic Institute.
+        %p Abel, a signer of the 1781 and 1803 Covenants of the New Concord Church, served as a Canaan pathmaster on Capt. Ebenezer Cady's New Concord beat (1779, 1783, 1787) and, in 1793, on Captain Beebe's; as a Chatham Collector (1802) and as a Chatham Overseer of the Poor (1806). By 1801, Abel had moved to another area of New Concord, and Amos took possession of the house until 1827, when he moved to Troy. [Owner: Jo Phelan]
+
+    .element_wrapper
+      .side
+        %h2 Lamoree Road
+      .main
+        %h2.no 27
+        %h3 The Lamoree-Mickle House
+        =partial('photo3-partial', :locals => { :photoname => "5LR-27-2" })
+        %p Lamoree Road, off County Route 9. It appears that the property, located at the edge of New Concord/Red Rock, was owned originally by Van Rensselaer Clark (b.1804, d.1842). A portion passed later to the Mickle, and later the Lamoree, families through the marriage of Clark's widow, Melinda Pratt (b. 1808, d. 1873), to Daniel Mickle in 1843. Melinda joined the New Concord Church in 1850, just as her father-in-law, John, had in 1835 and her sister-in-law, Hannah, in 1821. Two of her children were baptized there. When, in 1856, the Congregational Church petitioned to become Dutch Reformed, Daniel and Melinda were among the signers of the petition. [owners: Maynard and Kay Toll]
+
+    .element_wrapper
+      .side
+        %h2 Elliot Road
+      .main
+        %h2.no 86
+        %h3 The Deacon Samuel Waldo Farmstead
+        =partial('photo3-partial', :locals => { :photoname => "6ER-86-1" })
+        %p
+          In 1800 Samuel Waldo (b.1770, d.1858) and his wife Abiah, recent arrivals from Pawling Town, NY, became members of the North Chatham Baptist Church, where he was made a Deacon in 1808. He acquired his New Concord farm prior to 1810, but earlier had operated a blacksmith shop and store opposite the Rowe House. His father, also Samuel, had been a Baptist pastor in Dover, Dutchess county, in 1758. Deacon Waldo was the Overseer of Highways for his area's beat in 1814, 1815 and 1828. Beers' map shows Waldo still occupying the house in 185l. His grandson, Samuel W. Elliott, after whom Elliot Road is named, inherited the property upon Waldo's death in 1858. Elliott's father (another Samuel) was a founder of the Second Baptist Church of Pawling Town in 1794. The
+          %em Columbia County Directory
+          of 1871 lists Elliott as owning 115 acres. The acreage includes both sides of Elliot Road and of Route 295, and, augmented by the purchase of adjoining land by the present owners, extends to New Concord Road. [Owners: Paul T. and Frances N. Veillette]
+
+      .main
+        %h2.no 203
+        %h3 The Daniel Lovejoy House
+        =partial('photo3-partial', :locals => { :photoname => "6ER-203-2" })
+        %p Across from the Green at the corner of County 9. Daniel (b.1796, baptized New Concord Church 1805, d.1845)&mdash;the nephew of Andrew, cousin of Hezekiah, and grandson of Capt. Daniel and Prudence (Cady) Lovejoy (she a member of New Concord Church in 1781)&mdash;bought the property in 1831 from mortgagor John C. Hogeboom. In a separate building (now gone) he operated a store and Post Office. Earlier (1815), he had served as a School Fund Commissioner. Records of a 20th-century owner, the late Maurice Arrighi, indicate that before Hogeboom the property belonged to the (Congregational) Society of New Concord. The New Concord Church rested on a portion of Danie1's land on Elliot Road from 1838 to 1857, when it was moved to its present site [Owner: Frances N. (Mrs. Paul) Veillette]          
+
+    .element_wrapper
+      .side
+        %h2 Rock City Road
+      .main
+        %h2.no 817
+        %h3 The Elijah Cady/Elijah Cady, Jr. House
+        =partial('photo3-partial', :locals => { :photoname => "7RCR-817-1" })
+        %p Rock city Road near Rte. 295. This house appears to have been the home of Elijah Cady, Jr., the son of Elijah Cady (b.1746, d.1833), a Revolutionary War veteran and great-uncle of Elizabeth Cady stanton, the suffragette&mdash;although it is possible the son inherited it from his father. Elijah Senior and Junior were both property owners on the same beat in 1801 (the former having more than twice the property of the latter). The location of Elijah, Jr.'s house is identified in the 1809 Chatham town records as near the "Turnpike Road" [then a toll road, now the Rock City Road] and "the Bridge" (over the Stony Kill). In 1818, he was Overseer of Highways for Beat #45. His wife, Wealthy Cady, was an active member of the New Concord Church in 1821, 1828 and 1844. Elijah Senior was listed on the 1779 King's District tax list as a major landowner, and served as a pathmaster (1783), a fenceviewer (1794), a Chatham Commissioner of Highways (1810) and as an Overseer of Highways for Beat #45 (1812). His wife, Isabel (Jackson) Cady, supposedly a relative of President Andrew Jackson, died a member of the New Concord Church in 1826. [Owners: Russel and Lydia Neissel]
+
+      .main
+        %h2.no 983
+        %h3 The Garret M. Rowe House
+        =partial('photo3-partial', :locals => { :photoname => "7RCR-983-2" })
+        %p Just off NY State Route 295, around 1790 the house was owned by Daniel Troop (Throop) and served as a tavern (being located near a turnpike toll station). In 1801, Troop was the "owner" of a slave. The land itself seems to have been owned previously by Josiah Warner, one of the signers of the New Concord Church's 1781 Covenant. Later, in 1816, the property was purchased by Garret Rowe (Rauh), who came from the Milan area in Dutchess County, and has remained as the family's farm ever since. Rowe served as Overseer of Highways for his area's beat several times from 1817 to 1827, and, in 1831, was Chatham's Commissioner of Highways. [Owners: Richard and Dorothy Mackerer]
+
+    .element_wrapper
+      .side
+        %h2 Sayre Hill Road
+      .main
+        %h3 The Sayre House/Plast Camp
+        =partial('photo3-partial', :locals => { :photoname => "NCHouseN" })
+        %p This manorial structure, at the top of Sayre Hill Road, now owned by the Ukrainian Plast Youth Organization, was built around 1865 for Mrs.Rachel Sayer and her son Henry on the site of an earlier "mansion" (constructed for Daniel Cady about 1796) that perished in flames. Plast bought the property from Mr.and Mrs.Francis Chilson in 1953. Cady (b.1773, New Concord; d.1859, Johnstown), son of Eleazer (d.1819), seems to have acquired the then 550-acre property in 1796 from the estate of Captain Daniel Lovejoy (b.1738/39, d.179S) whose wife, Prudence Cady (c.1740 to c.1821), a member of the New Concord Church in 1781, was Cady's aunt. Lovejoy was elected Poormaster at the first King's District meeting (1772), and served as a Collector (1783) and Fenceviewer (1794). In 1779, he was the biggest property owner in the New Concord area; in his will he left a "negro wench" to his wife. Cady, who left New Concord when a young man, never held public office here, but served elsewhere as an Assemblyman, State Supreme Court Judge and congressman. His daughter, Elizabeth Cady Stanton (1815-1902), the suffragette, was born in Jamestown, NY. [Owner: Ukrainian Plast Organization]          
+
+    .element_wrapper
+      .side
+        %h2 NY State Route 203
+      .main
+        %h2.no 1209
+        %h3 The Captain John Savage House
+        =partial('photo3-partial', :locals => { :photoname => "9NY2-1209-4" })
+        %p At Morehouse Corners; intersection of State Route 203 and County Route 9 in Chatham. Although beyond the bounds of today's New Concord, its original owner, John Savage (b.1741, d.1826), and his wife, Ann Pratt (b.1741, d.1822), were both active members of the short-lived Anglican Church of New Concord, where three of their children were baptized in 1772, 1776 and 1779. In 1774, he was elected Constable and Tax Collector for the King's District (later Canaan), but, by 1776, had become a supporter of the King during the Revolution, serving as a Captain in the King's American Regiment. He was imprisoned in Connecticut for most of the war. His property confiscated (1783), he moved to Quebec, becoming the founder of the Town of Shefford, a large property owner, the first Justice of the Peace, a Captain in the Frontier Light Infantry and the "Chief Instigator" in building the first Anglican Church. [Owner: Jeff Braley]
+
+    =partial('footer-partial')

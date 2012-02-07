@@ -1,0 +1,369 @@
+/* Welcome to Susy. Use this file to define screen styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" /> */
+
+@import "defaults";
+
+/* @group STRUCTURE */
+
+@include susy;
+
+// change '#page' to match your HTML container element(s)
+#page {
+  @include container;
+  overflow: auto;
+  }
+/* @end */
+
+/* @group COMPONENTS by type */
+/* Headings */
+h1 {
+  color: $pagename-text-color;
+  font-style: italic;
+  @include adjust-font-size-to(32px);
+  }
+h2 {
+  color: $heading-text-color;
+  @include adjust-font-size-to(21px);
+  }
+h3 {
+  color: $plain-text-color;
+  @include adjust-font-size-to(18px);
+  @include padding-leader(1);
+  font-style: italic;
+  }
+
+#logo_pale {
+  @include adjust-font-size-to(32px);
+  @include leader(-0.25);
+  font-style: italic;
+  font-weight: normal;
+  a {
+    color: $logo-pale-color;
+    text-decoration: none;
+    &:hover {
+      color: $heading-text-color; }
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color; }
+    }
+  }
+#logo_bright {
+  @include adjust-font-size-to(64px);
+  @include leader(-0.125);
+  letter-spacing: -0.05em;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 40px;
+  a{
+    color: $logo-bright-color;
+    text-decoration: none;
+    &:hover {
+      color: $submenu-explanatory-color; }
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color; }
+    }
+  }
+
+.breadcrumbs{
+  @include adjust-font-size-to(14px);
+  @include horizontal-list(4px);
+  @include padding-trailer(0.5);
+  float: left;
+  li:before {
+    content: "\003E \0020";
+    color: $bullet-color; }
+  li:first-child:before {
+    content: ""; }
+  a {
+    color: $link-color;
+    font-variant: small-caps;
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color;
+      }
+    & span {
+      display: none;
+      }
+    &:hover span {
+      @include container;
+      font-size: 24px;
+      display: block;
+      position: absolute;
+      color: $menu-explanatory-color;
+      font-style: italic;
+      font-variant: normal;
+      line-height: $base-line-height * 1.3;
+      top: $base-line-height * 3;
+      width: 470px;
+      height: $base-line-height * 4;
+      left: 50%;
+      text-align: right;
+      white-space: pre-wrap;
+      }
+    }
+  }
+
+.element_wrapper {
+  border: 0;
+  @include container;
+  }
+
+.side {
+  color: $plain-text-color;
+  border-top: solid 2px $bullet-color;
+  padding-top: $base-line-height;
+  @include columns(4,12);
+  & a{
+    color: $link-color;
+    font-variant: small-caps;
+    }
+  }
+
+.main {
+  color: $plain-text-color; 
+  border-top: solid 2px $bullet-color;
+  padding-top: $base-line-height;
+  @include columns(8,12);
+  @include omega;
+  @include trailer(1);
+  }
+  li {
+    list-style-type: square;
+    list-style-position: inside;
+    }
+
+.topnav_wrapper {
+  @include container;
+  @include inline-block-list;
+  }
+
+.banner_wrapper {
+  border-top: solid 2px $bullet-color;
+  padding-top: $base-line-height;
+  @include container;
+  }
+
+a#current {color: $link-active-color;}
+
+body a.return {color: $submenu-explanatory-color;
+  }
+
+.main p a {color: $link-color;
+  &:active {
+    color: $reverse-text-color;
+    background-color: $link-active-color;
+    }
+  }
+
+.no {color: $submenu-explanatory-color;}
+
+.topnav {
+  @include adjust-font-size-to(18px);
+  @include horizontal-list(2px);
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+  float: right;
+  li:before {
+    content: "\30FB \0020";
+    color: $bullet-color; }
+  li:first-child:before {
+    content: ""; }
+  a {
+    color: $link-color;
+    font-variant: small-caps;
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color;
+      }
+    & span {
+      display: none;
+      }
+    &:hover span {
+      @include container;
+      font-size: 24px;
+      display: block;
+      position: absolute;
+      color: $menu-explanatory-color;
+      font-style: italic;
+      font-variant: normal;
+      line-height: $base-line-height * 1.3;
+      top: $base-line-height * 3;
+      width: 470px;
+      height: $base-line-height * 4;
+      left: 50%;
+      text-align: right;
+      white-space: pre-wrap;
+      }
+    }
+  }
+
+.logonav_wrapper {
+  border-top: solid 2px $bullet-color;
+  padding-top: $base-line-height;
+  @include container;
+  }
+
+.nav {
+  @include adjust-font-size-to(22px);
+  @include horizontal-list(2px);
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+  li:before {
+    content: "\30FB \0020";
+    color: $bullet-color; }
+  li:first-child:before {
+    content: ""; }
+  a {
+    color: $link-color;
+    font-variant: small-caps;
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color;
+      }
+    & span {
+      display: none;
+      }
+    &:hover span {
+      @include container;
+      font-size: 24px;
+      display: block;
+      position: absolute;
+      color: $menu-explanatory-color;
+      font-style: italic;
+      font-variant: normal;
+      line-height: $base-line-height * 1.3;
+      top: $base-line-height * 3;
+      width: 470px;
+      height: $base-line-height * 4;
+      left: 50%;
+      text-align: right;
+      white-space: pre-wrap;
+      }
+    }
+  }
+
+.tertiary_wrapper {
+  @include container;
+  }
+
+.ternav {
+  @include adjust-font-size-to(18px);
+  li {
+    list-style-type: square;
+    color: $bullet-color; }
+  li:first-child {
+    list-style-type: none; }
+    & a {color: yellow;}
+  a {
+    color: $link-color;
+    list-style-type: square;
+    font-variant: small-caps;
+    &:active {
+      color: $reverse-text-color;
+      background-color: $link-active-color;
+      }
+    & span {
+      display: none;
+      }
+    &:hover span {
+      @include container;
+      font-size: 24px;
+      display: block;
+      position: absolute;
+      color: $submenu-explanatory-color;
+      font-style: italic;
+      font-variant: normal;
+      line-height: $base-line-height * 1.3;
+      top: $base-line-height * 3;
+      width: 470px;
+      height: $base-line-height * 4;
+      left: 50%;
+      text-align: right;
+      white-space: pre-wrap;
+      }
+    }
+  }
+
+a.return#current {display: none;}
+
+ol li {
+  list-style-type: upper-alpha;
+  &:first-line{font-weight: bold;}
+  & p{
+    @include prefix(0.125,6);
+    }
+  }
+
+ol ol li {
+  list-style-type: decimal;
+  @include prefix(0.25,6);
+  }
+
+a.thumbnail {
+  position: relative;
+  border: 0;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-top: 25px;
+  float: left;
+  zindex: 0;
+  & img {
+    display: block;
+    width: 150px;
+    border: 0;
+    }
+  &:hover {
+    background-color: transparent;
+    z-index:500;
+    }
+  & span {
+    position: absolute;
+    padding: 0;
+    left: -1000px;
+    border: 0;
+    visibility: hidden;
+    color: black;
+    text-decoration: none;
+    }
+  &:hover span {
+    visibility: visible;
+    width: 300px;
+    top: 0;
+    left: -320px; /*position where enlarged image should offset horizontally */
+    }
+  &:hover span img {
+    width: 300px;
+    }
+  }
+
+.main a.thumbnail span {
+  color: $bullet-color;
+  @include adjust-font-size-to(9px);  
+  }
+
+.footer_wrapper {
+  @include container;
+  border-top: solid 2px $bullet-color;
+  @include padding-leader(1);
+  @include adjust-font-size-to(14px);
+  }
+/* @end */
+
+/* @group OVERRIDES by content */
+
+/* @end */
+
+/* @group OVERRIDES by page */
+
+/* @end */
+
+/* @group DEBUG */
+
+// Uncomment, adjust and use for debugging
+
+// #page {
+//   @include show-grid("your-grid-image.png"); }
+
+/* @end */

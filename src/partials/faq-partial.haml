@@ -1,0 +1,13 @@
+-# "docs" will collect all the documents in the file 'events.yaml'
+- docs = []
+- YAML.load_documents(open("src/helpers/faq.yaml")){ |doc| docs << doc }
+-# at this point docs contains the full content of 'events.yaml'
+- docs.each do |listing|
+  .element_wrapper
+    .side
+    %h3 Test Text
+    .main
+    -#    = ".main#{listing["bookmark"]}"
+      %h2= listing["question"]
+      - listing["text"].split("\n").each do |para|
+        %p= para

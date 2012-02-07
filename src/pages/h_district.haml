@@ -1,0 +1,39 @@
+!!! Strict
+%html
+  -# current page reference
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# see if page name starts with a prefix: xxx_pagename; use that for tertiary menu
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :sub => @sub, :location => @tag})
+      .main
+        %h2 Background
+        %p
+          New York's State Historic Preservation Office (SHPO) helps communities identify, evaluate, preserve and revitalize their historic, archeological and cultural resources.
+        %p
+          Ei quidam recusabo vix, id quidam vocibus duo, populo aperiam ad vis. Dolore impetus assentior te pro. Brute omnes electram ea eos, aeque vituperata consequuntur eam id. Porro mentitum an usu, omnis aliquid apeirian sed an, ei sed tamquam sensibus consulatu.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 New York State Historic District Designation
+        %p Te summo novum everti qui, quo percipit delicatissimi no. Eos hinc semper sensibus no, eirmod sententiae nam ea. Option officiis expetendis has et. Option referrentur sit te, mei dicat sadipscing ea. Te audiam probatus his, tollit ancillae ei est, has et assentior honestatis. Duis consequat at mei.
+        %p At laoreet singulis sit, veri aliquam ei qui. Pri wisi philosophia ex, eos regione convenire ex. At pri fabulas epicuri oportere, cu eum oportere convenire. Id quo debet veniam dissentiunt. Qui ut pericula qualisque, in erat graeco mandamus sed. Eam amet nonummy inimicus ut, mel in simul vitae.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Federal Historic District Designation
+        %p Eam suas facilis ceteros ut, quo ne regione perpetua, at docendi accusam intellegam nec. Et rebum accusam detracto eos, putant deleniti appellantur usu te. Duo ei nemore dictas appellantur, no vix docendi contentiones, ne erat eleifend sed. Cum numquam repudiandae cu, an vel vitae quaestio postulant. Fugit dolore officiis vim no, mel vitae signiferumque an, at vix munere vituperatoribus. An iudico vituperata mei, ad accumsan nominavi adversarium vim.
+        %p Reque zzril aliquyam an vis, pro probo mazim an. Pri eu affert tation, fabellas aliquando et mea, sit decore saperet ea. Dicant prodesset mei ut. Duo te wisi philosophia, per partem facilis ex, exerci delenit blandit ne pri. At mea inani simul labitur.
+        %p Nam veritus copiosae ea, solet dictas vim no. Cum albucius inimicus definiebas te, porro saepe in nec, mei errem democritum eu. No sit omnes vivendo, falli facilisis sea ex. No everti probatus reformidans pro, quo te hendrerit delicatissimi.
+    
+    =partial('footer-partial')

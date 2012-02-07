@@ -1,0 +1,18 @@
+.banner_wrapper
+  .banner
+  - info = YAML.load_file("src/helpers/page_particulars.yaml")
+  - particulars = info[location]
+  %h1= particulars["banner"]
+  .breadcrumbs
+    %ul
+      - particulars["breadcrumbs"].each do |h|
+        - tertiary = YAML.load_file("src/helpers/tertiary_menu.yaml")
+        - combined = YAML.load_file("src/helpers/main_menu.yaml") + YAML.load_file("src/helpers/top_menu.yaml") + tertiary["h_menu"] + tertiary["s_menu"] + tertiary["g_menu"]
+        - chain = []
+        - combined.each do |ix|
+          - chain = chain << ix[h]
+        - item = chain.compact[0]
+        %li
+          %a{:href => item["ref"], :title => item["tooltip"]}
+            = item["item"]
+            %span= item["popup"]

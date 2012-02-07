@@ -1,0 +1,168 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Article I&nbsp;&mdash;&nbsp;Name
+        %p
+          The name of this organization shall be
+          %em THE SOCIETY OF NEW CONCORD
+          &mdash;a revival and continuation of the original name of the hamlet of
+          %a{:href => "http://newyork.hometownlocator.com/ny/columbia/new-concord.cfm", :title => "New Concord Info in 'hometownlocator'"} New Concord
+          at its founding circa 1764.
+        %p
+          Its postal address is
+          %a{:href => "http://newyork.hometownlocator.com/ny/columbia/east-chatham.cfm", :title => "East Chatham Info in 'hometownlocator'"} East Chatham, New York  12060
+
+    .element_wrapper
+      .side
+        %h2 Article II
+      .main
+        %h2 Purposes
+        %p The Society, a non-profit organization recognized as a 501(c)(3) organization by the Internal Revenue Service, shall have the following purposes:
+        %ol
+          %li
+            To promote
+            %p the general community welfare of the hamlet of New Concord and the fellowship of its residents, and
+          %li
+            To encourage
+            %p research into the history of New Concord, publication of the results of the research, and preservation of relevant historical information and artifacts, and
+          %li Notwithstanding any other provision of these articles:
+          %ol
+            %li
+              The Society is organized exclusively for one or more of the following purposes:  religious, charitable, scientific, testing for public safety, literary, or educational purposes&hellip;as specified in
+              %a{:href => "http://www.irs.gov/charities/charitable/article/0,,id=96099,00.html", :title => "IRS requirements"} section 501(c)(3)
+              of the Internal Revenue Code of 1954, and shall not carry on any activities not permitted to be carried on by an organization exempt from Federal income tax under section 501(c)(3) of the Internal Revenue Code of 1954.
+            %br
+            %li No part of the net earnings of the Society shall inure to the benefit of any member, trustee, director, or officer of the Society, or any private individual (except that reasonable compensation may be paid for services rendered to or for the Society), and no member, trustee, or officer shall be entitled to share in the distribution of any of the Society's assets upon dissolution of the Society.
+            %br
+            %li No substantial part of the activities of the Society shall be carrying on propaganda (or otherwise attempting) to influence legislation (except as otherwise provided by Internal Revenue Code section 501(h)), or by intervening in (including the publication or distribution of statements) in any political campaign on behalf of any candidate for public office.
+            %br
+            %li Upon dissolution of the Society, assets shall be distributed for one or more exempt purposes within the meaning of section 501(c)(3) of the Internal Revenue Code or corresponding section of any future Federal tax code, or shall be distributed to the Federal government, or to state or local government, for a public purpose.  The Offices of Town Historian of the Town of Chatham, New York and the Town Historian of the Town of Canaan, New York shall be primary organizations considered.
+
+    .element_wrapper
+      .side
+        %h2 Article III
+      .main
+        %h2 Membership
+        %ol
+          %li
+            Regular Members:
+            %p Any person willing to support the purposes of the Society of New Concord, and who maintains payment of dues, shall be eligible for regular voting membership.
+          %li
+            Charter Members:
+            %p
+              The Charter Members of the Society are those persons admitted to membership prior to or on March 21, 1983. Their names can be found in the "New Concord column" of the
+              %a{:href => "http://www.recordernewspapers.com/chatham_courier/", :title => "Chatham Courier Website"}
+                %em Chatham Courier
+              &nbsp;of December 23, 1982, March 10, 1983, and April 14, 1983.
+          %li
+            Honorary Members:
+            %p
+              The Town Historians of the towns of Chatham and
+              %a{:href => "http://www.canaannewyork.org/officials/index.shtml", :title => "Canaan Officials website"} Canaan
+              shall be Honorary Members,
+              %em ex officio
+              , of the Society. The Board of Directors of the Society is authorized to designate other worthy persons as Honorary Members. Honorary Members shall be non-voting members and exempt from paying dues.
+    .element_wrapper
+      .side
+        %h2 Article IV
+      .main
+        %h2 Directors and Officers
+        %ol
+          %li
+            Board of Directors
+            %p A board of directors consisting of six Regular Members were selected at the first Annual Meeting of the Society in July 1983. Two directors were elected to serve one-year terms, two for two-year terms, and two for three-year terms. As the term of each director subsequently expired, his/her successor was elected for a three-year term at the Annual Meeting of the Society.
+            %p Effective in January 2007, the board of directors shall consist of nine Regular Members serving staggered three-year terms.  Of the three additional seats open for election at the 2007 Annual Meeting, one will be filled by a director elected for a one-year term, one elected for a two-year term, and one elected for a three-year term. As each of these terms expires, the successor will be elected for a three-year term. As a result of this change, starting in 2008, three board seats will be subject to election each year.
+          %li
+            Officers
+            %p The Officers of the Society shall consist of a President, Vice-President, Treasurer, Secretary and Historian. Each year (beginning in 2007), the officers, with the exception of the Historian, shall be elected by the Board of Directors from among the Board's members following each Annual Meeting.  The Historian shall be chosen by the Board from among the Board's members or the Society's Regular Members.
+          %li The duties of the directors and officers are:
+          %ol
+            %li
+              Board of Directors:
+              %p The Board of Directors, acting as a body, shall be the governing board of the Society on all policy matters in between general meetings of the Society membership. It shall approve the creation of committees to carry on Society activities.
+            %li
+              President:
+              %p The President shall be the Chief Executive Officer of the Society and shall be responsible for properly executing the directives of the general membership and the Board of Directors. He/she is responsible for appointing all committee chairmen and for taking initiatives in recommending plans for future Society activities.
+            %li
+              Vice-President:
+              %p In the absence of the President, the Vice-President shall assume all of his/her duties, powers and responsibilities.
+            %li
+              Secretary:
+              %p The Secretary is responsible for recording minutes of meetings of the general membership and of the board of directors and, in addition, for preparing and mailing meeting notices.
+            %li
+              Treasurer:
+              %p The Treasurer shall be responsible for maintaining the several accounts of the Society and its checking account(s); for all fiscal affairs, including tax returns and insurance; and for payment of bills in a timely manner.
+            %li
+              Historian:
+              %p
+                The Historian shall engage in historical research relevant to New Concord's history and shall prepare appropriate papers for publication. He/she shall submit information on the Society's current activities for publication in the "New Concord column" of the
+                %a{:href => "http://www.recordernewspapers.com/chatham_courier/", :title => "Jump to Chatham Courier Newspaper Website"}
+                  %em Chatham Courier.
+            %li
+              Clarification of Duties:
+              %p The Board of Directors of the Society is empowered to clarify and modify the specific duties of the officers, as appropriate, consistent with the general intent of Article IV, Section C.
+    .element_wrapper
+      .side
+        %h2 Article V
+      .main
+        %h2 Meetings:
+        %p The Society shall hold at least four general meetings each year, one of which will be the Annual Meeting.  The annual Frolic, the community tree-lighting ceremony, and other general membership events can be counted toward this requirement if the Board so desires.
+    .element_wrapper
+      .side
+        %h2 Article VI
+      .main
+        %h2 Dues:
+        %p The annual dues are due each year at the Annual Meeting.  For Regular Members dues shall be twenty dollars ($20) per person over the age of 18.  This amount can be changed by a majority vote of the Regular Members at any duly announced meeting of the Society upon the recommendation of the Board of Directors
+    .element_wrapper
+      .side
+        %h2 Article VII
+      .main
+        %h2 Charitable Fund:
+        %p The Board of Directors is authorized to create a Fund, separate and apart from its other funds, the contributions to which are intended to be tax-deductible and shall be used exclusively for such charitable, educational, literary and other purposes consistent with Section 501(c)(3) of the Internal Revenue Code of 1954 and with Article II, Section C of these By-Laws.
+    .element_wrapper
+      .side
+        %h2 Article VIII
+      .main
+        %h2 Rules of Order:
+        %p
+          The general rules of parliamentary procedure shall be followed at Society meetings.
+          %a{:href => "http://www.robertsrules.org/rulesintro.htm", :title => "Robert's Rules of Order"} <em>Robert's Rules of Order</em>
+          shall be the deciding reference work.
+    .element_wrapper
+      .side
+        %h2 Article IX
+      .main
+        %h2 Amendments:
+        %p These By-Laws may be amended by a two-thirds vote of the Regular Members attending any general meeting of the Society provided that notice of the intended amendment is duly announced in advance in the meeting notice.
+    .element_wrapper
+      .side
+      .main
+        %h2 Historical Note:
+        %ul
+          %li These By-Laws were adopted by the organizing committee on December 13, 1982;
+          %li edited for form on February 28, 1983;
+          %li amended to include the present Section C of Article IV ("Duties of Officers") on October 8, 1983;
+          %li further amended on November 28, 1986 to include the present Section C of Article II, which deals with the purposes of the Society;
+          %li further amended on July 8, 1990 rescinding the membership category of "Members in Memoriam" (then in Article III:  Membership);
+          %li and lastly, amended on January 20, 2007 to increase the Board from six to nine members, to provide that all officers except Historian shall be elected by the Board from among its members, and to increase the annual dues from $10 to $20 per person over the age of 18.
+        %p
+          Pursuant to a Society purpose (Article II-B) and to the duties of the Historian (Article IV-C-6), Paul Veillette published
+          %a{:href => "http://www.kinshipny.com/columbia.htm", :title => "An Early History of New Concord, publisher's site"}
+          %em An Early History of New Concord: c.1760 to 1856
+          (145 pp.) in 1993. It was republished (161 pp.) by Kinship Publishing, Rhinebeck, NY, in 1999.
+
+    =partial('footer-partial')

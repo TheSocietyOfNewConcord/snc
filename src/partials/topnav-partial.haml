@@ -1,0 +1,13 @@
+.topnav_wrapper
+  .topnav
+    - info = YAML.load_file("src/helpers/top_menu.yaml")
+    =list_of(info) do |h|
+      - name = h.keys.first
+      - hash = h[name]
+      -# need to test current page somehow agains the hash key name
+      - idval = location == name ? "current" : false
+      -# sets "id" of %a unless "idval" is false
+      -#   in that case "id" is not set at all
+      %a{:href => hash["ref"], :title => hash["tooltip"], :id => idval}
+        = hash["item"]
+        %span= hash["popup"]

@@ -1,0 +1,68 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Our Talented and Energetic Members
+        %p Our own membership contains a core of generous and talented people who&mdash;some of them over and over again&mdash;provide their time, their talent and their money to SNC projects.
+        %p Over the years, a number of our members have opened their homes and their gardens for SNC events. Others have acted as unreimbursed Society officers, or collected dues, worried over membership numbers and lists. Ambitious SNC members have climbed trees, taken photographs, drawn artworks, acted as historical figures and sold flowers to the benefit of the Society. Many are willing to contribute food and ideas for events.
+        %p A few New Concord inhabitants contributed significant money, mostly unsung, to buy and fuel a new heating system for the Community Hall.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Veillette-Nifosi Foundation
+        %p
+          For years, the
+          %a{ :alt => "Veillette-Nifosi Foundation", :href => "http://bartlett.oag.state.ny.us/Char_Forms/show_details.jsp?id={CFD57210-DAE5-4894-8F7E-45202DD7FBE3}" , :title => "Veillette-Nifosi Foundation"}Veillette-Nifosi Foundation
+          has provided much support for various Society of New Concord-related projects and entities. The foundation has most recently provided the funds for rehabilitation of the derelict DeWitt-Brown road cemetery. It has provided funds to aid the operation and repair of the New Concord Reform Church building when that focus of geographical New Concord was in tight circumstances. And it bought and installed the two memorial benches on the New Concord Green.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Ed Herrington
+        %p
+          Perhaps in recollection of his younger days in New Concord, Ed Herrinton (of
+          %a{:alt => "Ed Herrington, Inc.", :href => "http://www.edherrington.com/" , :title => "Herrington's Lumber, Millwork, Building Supplies"}Ed Herrington, Inc.
+          in Chatham) provided all the insulating material for the Community Hall insulation project.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Steve Anderson and Kevin Weldon
+        %p Steve repaired and re-erected the historical marker in The Green, after a drunk driver ran it over. Kevin Weldon painted and had the sign relettered.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Grange
+        %p Like the Society of New Concord, <em>the Grange</em> has had an interest in using and maintaining the Community Hall attached the the New Concord Church. We thank them for being sensible and cooperative in these non-trivial efforts.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 R.Paige Donhauser
+        %p For a significant contribution to the rehabilitation of the Dewitt Brown Road Cemetery.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Webhosting for this site
+        %p
+          2009-. This website is hosted without cost to us by
+          %a{ :alt => "Hudson Union", :href => "http://www.hudsonunion.com/", :title => 'Hudson Union Interactive Design'}Hudson Union
+          , courtesy of Mike Kelly.
+
+    =partial('footer-partial')

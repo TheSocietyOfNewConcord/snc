@@ -1,0 +1,67 @@
+!!! Strict
+%html
+  -# current page reference
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# see if page name starts with a prefix: xxx_pagename; use that for tertiary menu
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :sub => @sub, :location => @tag})
+      .main
+        %h2 Mountain View Cemetery
+        %p
+          The Mountain View Cemetery Association, the only active cemetery in New Concord today, was chartered on October 26, 1866, but a burial site existed at the location as far back as 1803. In May, 1966, the minutes of the Association record that gravestones (but not the accompanying bodies) were transferred to Mountain View from an early burial ground, located at the junction of Daley Road and County Route 9. Among them were two Revolutionary War officers, Capt.Ebenezer Cady, who died in 1816, and Capt.John Davis (1817). Other veterans of the Revolution are also buried in Mountain View.
+        %p
+          %img{:src => "images/MountainViewCemetery 20090525 144356full.jpg", :width => "640px"}
+        %p
+          Mountain View Cemetery is located on County Route 9 between the New Concord Green and the bridge across I-90. It is immediately adjacent to the property of Sue and Steve Anderson,
+          %a{:href => "houses.html", :title => "Historic Houses of New Concord"} The Orlando B. Allen/James A.Housman House
+          \.
+
+    .element_wrapper
+      .side
+        %img{:class => "left-float", :src => "images/DeWittBrownCemetery 20090907 042255-1full.jpg", :width => "300px"}
+      .main
+        %h2 DeWitt Brown Road Cemetery
+        %p
+          This cemetery, long abandoned, is located on a wooded hill where DeWitt Brown Road and Sayre Hill Road meet.  It  was the first cemetery in New Concord, containing graves dating from 1764 to 1835. Among them are graves of the earliest settlers, including the Beebe, Lovejoy, Smith, Cady, Eaton, Doty, Thomas and Wilcox families. The graves of at least a half-dozen Revolutionary War veterans can be found here. In the fall of 2008, the cemetery was extensively rehabilitated by the Society of New Concord, funded by a grant from the Veillette-Nifosi Foundation.
+        %p
+          The DeWitt Brown Road Cemetery is located at the junction of DeWitt Brown Road and Sayre Hill Lane, where DeWitt Brown 
+          %em Road
+          becomes DeWitt Brown
+          %em Lane
+          \. At present there is no easy vehicular access to the cemetery; nonetheless, it is reachable by hiking up the continuation of DeWitt Brown Road, beyond the home of R.Paige Donhauser,
+          %a{:href => "houses.html", :title => "Historic Houses of New Concord"} The Alexander Hulbert House
+          \.
+        %p
+          %br
+        %p
+          %br
+        %p
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Cemetery of the Maples (East Chatham)
+        %p
+          %img{:float => "right", :src => "images/CemeteryOfMaples 20090806 091207full.jpg", :width => "460px", :display => "inline-block"}
+          Although The Cemetery of the Maples is an East Chatham site, it is included here because some prominent New Concord historical figures are buried there. The East Chatham Cemetery of the Maples is located behind The Librarium on Black Bridge Road, on the North side of NY State Route 295, just east of the new bridge across the railroad.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Map
+        %p
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?hl=en&amp;ie=UTF8&amp;msa=0&amp;msid=105463214074315307341.000470395459420e1c476&amp;ll=42.400375,-73.51892&amp;spn=0.044367,0.072956&amp;z=13&amp;output=embed">
+          </iframe>
+          <br />
+        %p  <small>View <a href="http://maps.google.com/maps/ms?hl=en&amp;ie=UTF8&amp;msa=0&amp;msid=105463214074315307341.000470395459420e1c476&amp;ll=42.400375,-73.51892&amp;spn=0.044367,0.072956&amp;z=13&amp;source=embed" target="_blank" style="color:#0000FF;text-align:left">New Concord Historic Cemeteries</a> in a larger map</small>
+    
+    =partial('footer-partial')

@@ -1,0 +1,16 @@
+!!! Strict
+%html
+  -# current page reference
+  -# current page reference (StaticMaitc)
+  - current = "~/Sites/snc/site/faq.html" #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    =partial('faq-partial')
+    =partial('footer-partial')

@@ -1,0 +1,11 @@
+.element_wrapper
+  - info = YAML.load_file("src/helpers/#{where}_menu.yaml")
+  - index = info.index{ |h| h.keys.first == itemkey }
+  - hash = info[index][itemkey]
+  .side
+    %a{:href => hash["ref"], :title => hash["tooltip"]}
+      = hash["item"]
+  .main
+    %h2= hash["sitemapdesc"]
+    %p= hash["tooltip"]
+

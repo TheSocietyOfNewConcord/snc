@@ -1,0 +1,129 @@
+# "name" and "banner" for each page
+#   "name" is used in the page name that appears in browser title bar
+#   "banner" is the headline for the given page, it appears below navigation menues in large/bold
+#  supplied to pagename_helper.rb and banner_helper.rb
+
+index:
+ name: ~
+ banner: Who We Are, and What We Do
+ breadcrumbs: [index]
+
+news:
+ name: News
+ banner: News of the Society
+ breadcrumbs: [index, news]
+
+events:
+ name: Events
+ banner: Upcoming SNC Events
+ breadcrumbs: [index, events]
+
+donate:
+ name: Donate
+ banner: Donate to Purchase the Church Building; Pay Dues On-Line
+ breadcrumbs: [index, donate]
+
+faq:
+ name: FAQ
+ banner: Frequently-asked Questions
+ breadcrumbs: [index, faq]
+
+group:
+ name: Google Group
+ banner:
+ breadcrumbs: [index, group]
+
+blog:
+ name: Weblog
+ banner: 
+ breadcrumbs: [index, blog]
+
+sitemap:
+ name: Site Map
+ banner: Sitemap
+ breadcrumbs: [index, sitemap]
+
+contact:
+ name: Contact
+ banner: How to Contact Us
+ breadcrumbs: [index, contact]
+
+h_history:
+ name: History
+ banner: History of New Concord
+ breadcrumbs: [index, h_history]
+
+h_houses:
+ name: Historic Houses
+ banner: Historic Houses of New Concord
+ breadcrumbs: [index, h_history, h_houses]
+
+h_cemeteries:
+ name: Cemeteries
+ banner: Historic Cemeteries of New Concord
+ breadcrumbs: [index, h_history, h_cemeteries]
+
+h_district:
+ name: Historic District
+ banner: New Concord Historic District
+ breadcrumbs: [index, h_history, h_district]
+
+h_tours:
+ name: Walking Tours
+ banner: Walking Tours in and around New Concord
+ breadcrumbs: [index, h_history, h_tours]
+ 
+h_church:
+ name: Church
+ banner: The New Concord Church and Community Hall
+ breadcrumbs: [index, h_history, h_church]
+
+s_history:
+ name: Society History
+ banner: Purpose, Background, History of the Society
+ breadcrumbs: [index, s_history]
+
+s_bylaws:
+ name: Bylaws
+ banner: Society Bylaws
+ breadcrumbs: [index, s_history, s_bylaws]
+
+s_officers:
+ name: Officers
+ banner: Current Officers of the Society
+ breadcrumbs:  [index, s_history, s_officers]
+
+s_committees:
+ name: Board Committees
+ banner: Society Committees
+ breadcrumbs: [index, s_history, s_committees]
+
+s_members:
+ name: Members
+ banner: Our Members
+ breadcrumbs: [index, s_history, s_members]
+
+s_benefactors:
+ name: Benefactors
+ banner: Our Benefactors
+ breadcrumbs: [index, s_history, s_benefactors]
+
+g_gallery:
+ name: Gallery
+ banner: A Gallery of Images Related to New Concord and Environs
+ breadcrumbs: [index, g_gallery]
+
+g_scenes:
+ name: New Concord Scenes
+ banner: A Gallery of Images Related to New Concord and Environs
+ breadcrumbs: [index, g_gallery, g_scenes]
+
+g_hphotos:
+ name: Historic Photos
+ banner: A Gallery of Historical New Concord photographs
+ breadcrumbs: [index, g_gallery, g_hphotos]
+
+g_art:
+ name: New Concord Art
+ banner: Art Works Related to New Concord
+ breadcrumbs: [index, g_gallery, g_art]

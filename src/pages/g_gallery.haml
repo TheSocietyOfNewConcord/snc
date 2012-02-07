@@ -1,0 +1,31 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Drawings, Paintings, Photographs
+        %p For a small place, New Concord is home to a number of creative people&mdash;some who work in the arts professionally, and some who are involved as hobbyists. We have professional photographers and people who take weekend snapshots; painters who sell and show, and people who dash off sketch drawings. We are also lucky enough to have fallen heir to some historical photographs of the hamlet that give us a hint of how things looked many years ago.
+        %p Members and Friends of the New Concord community are encouraged to submit art works for display on this website for the enjoyment of our neighbors. Send them electronically to
+        %a{:href => "mailto:rhk1@columbia.edu", :title => "rhk1@columbia.edu"} rhk1@columbia.edu
+
+    .element_wrapper
+      .side
+        %h2 'Cleanup New Concord' Day
+      .main
+        %h2 April 2009
+        =partial('photo3-partial', :locals => { :photoname => "CleanupNC 20090411 144921" })
+        %p Dan Rapoport, on The Green, is loading SOME of the trash (tires, bottles, rusty cans, plastic, bags, boxes and car parts) that we collected from the roadsides into his pickup for transport to be recycled.
+
+    =partial('footer-partial')

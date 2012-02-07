@@ -1,0 +1,61 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Founding of New Concord
+        %p The groundwork for New Concord was laid in 1754, when a group of 43 Connecticut land speculators met with representatives of the Mahican Indian Nation&mdash;also known as the Stockbridge Indians, or Mohicans&mdash;to purchase "six miles square" of Indian land on the Massachusetts-New York border. Eventually, the land became the northeast quadrant of Columbia County. The purchase price: "250 pounds, New York money." consummated on November 22, 1758.
+        %p A decade later, around 1764, John Beebe of Kent, Connecticut, one of the Yankee speculators, led a group of his fellow Yankees to occupy a section of the six-miles-square that was to become the future New Concord. At that time, ownership of the land was claimed by both the heirs of the Dutch patroons and the Yankees, who were regarded as squatters by the patroons. [The disputed titles to the settlers&rsquo; lands were not settled by the state legislature until 1788.]
+        %p Before 1772, the settlers had no formal government; their only "government" was the Congregational Church, to which the settlers and their leadership belonged. The settlers were largely of Puritan background, with a few of Pilgrim [Massachusetts] heritage. By today&rsquo;s standards, they would be regarded as religious fundamentalists.
+        %p When government came to the area in the form of the King's District of Albany County, New Concord was officially recognized as one of its six subdistricts at the district's first meeting on May 5, 1772. As such, its area  extended from New Canaan, a subdistrict on its east border, to the Kinderhook District of Albany County on its west. In 1788, the name of the King's District was changed to Canaan, and in 1795 the town of Chatham was created from portions of Canaan and Kinderhook, causing the hamlet of New Concord to be split between Canaan and Chatham.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Agriculture and Commerce
+        %p Subsistence farming and the raising of sheep were the earliest enterprises of New Concord settlers. Looms were operated by families in their homes, producing hundreds of yards of cloth for sale. (The Loom Room on the 2nd floor of 339 New Concord Road was one of them.) As more land was cleared and more crops grown, entrepreneurs took advantage of the area&rsquo;s streams to erect grist mills to process grain. Mills in East Chatham were operated by Hosea Beebe and, later, by Anson Pratt, both of New Concord.
+        %p In 1819, a two-story building, called Mechanics&rsquo; Hall, was built across from the New Concord Green by Masonic Lodge No.44. It housed a number of shops (e.g., cabinet-making and hat-making), the rooms of the Masonic Lodge, and classrooms where students from Williams College tutored local youngsters. When, in 1838, a newly-constructed railroad established a station at East Chatham, the businesses of New Concord (stores, taverns, blacksmith shops) gradually moved to East Chatham. Henceforth, the hamlet became a residential community.
+        %p New Concord had its own Post Office as early as 1826. It covered the geographic area now covered by the East Chatham Post Office, which was not created until 1851. The New Concord Post Office subsequently functioned as an adjunct of East Chatham until 1900, when it was abolished.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Architecture and Historical Houses
+        %p The architecture of New Concord reflects its Connecticut colonial heritage. The designs of New Concord homes range from the simple "Connecticut Cape Cod" of Daniel Lovejoy (c.1830, or earlier), across from the Green, a style common in Kent, to the much more elaborate Federal-Georgian style house nearby, built by Anson Pratt (1802-1812) to a design created by the Adam brothers. A similar, but more modest, Adam house, owned by a relative, Azariah Pratt, exists in Kent.
+        %p Ironically, although the initial homes of the Beebe settlers in New Concord no longer exist, their homes in Kent have been preserved. The home of John Beebe, Sr., the leader of the settlers, has benefited from a museum-quality restoration.  It has five fireplaces. Across the road is the former home of John Beebe, Jr., later a Justice of the Peace in New Concord. It has seven fireplaces, and is now the home of the Kent Historical Society. Next door is the home of "Uncle [of the Beebes] Azariah Pratt."
+        %p
+          Among the properties of historic significance in New Concord are the Hosea Beebe house (1785), the stagecoach tavern on the Green of Bartlett Van Valkenburgh (early 1800s), the Anson Pratt house and the Daniel Lovejoy house&mdash;all on, or just off of, County Route 9. Of at least equal significance are the homes of Major Martin Beebe, Capt.Joshua Palmer and Dr.Patrick Hamilton on New Concord Road, and the brick Garret Rowe house on Route 295/Rock City Road. [For more on these and others see Veillette, 
+          %em An Early History of New Concord (1993)
+          , 161 pages, Chatham Public Library.]
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Illustrious Personages
+        %p 
+          "Over the years, New Concord has produced some illustrious personages and has attracted others. A partial list includes
+          %a{:href => "http://en.wikipedia.org/wiki/Amos_Eaton", :title => "Wikipedia enrty for Amos Eaton"}Amos Eaton
+          , the first President of the Rensselaer Polytechnic Institute; Henry Sabin, a President of Williams College; and 
+          %a{:href => "http://en.wikipedia.org/wiki/Erastus_Corning", :title => "Wikipedia entry for Erastus Corning"}Erastus Corning
+          , the first President of the New York Central Railroad. Corning&rsquo;s descendant, 
+          %a{:href => "http://en.wikipedia.org/wiki/Erastus_Corning_II", :title => "Wikipedia entry for Erastus Corning II"}Erastus Corning, 2nd
+          , served as Mayor of Albany for 42 years. Another New Concord descendant, 
+          %a{:href => "http://en.wikipedia.org/wiki/Elizabeth_Cady_Stanton", :title => "Wikipedia entry for Elizabeth Cady Stanton"}Elizabeth Cady Stanton
+          , whose family's roots were in New Concord, became a nationally famous suffragette. Henry Bedlow, diplomat, poet and explorer, and Edward O&rsquo;Brien, Brigadier General and president of two international companies, became residents here. And 
+          %a{:href => "http://en.wikipedia.org/wiki/Lawrence_W._Pierce", :title => "Wikipedia entry for Lawrence W. Pierce"}Lawrence W. Pierce
+          , a senior Judge in the 2nd U.S. Circuit Court, and his family lived in New Concord for over a decade, and were active in community affairs."&nbsp;&nbsp;&mdash;From Viellette&rsquo;s 
+          %em An Early History of New Concord
+
+    =partial('footer-partial')

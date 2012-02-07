@@ -1,0 +1,48 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+      .main
+        %h2 Church Background
+        %p
+          The Dutch Reformed Church near the Green in New Concord ceased being a functioning religious site in 2009, and the doors of the building were locked for the first time (!!) since the church was built in 1838. This church building has been at the heart of New Concord from its early days, and a (then Congregational) church congregation has been at the community core since that assembly was organized c.1764.
+        %p
+          The community hall [appended after World War II] has been the "home" (meetings, parties, committees) of <em>The Society of New Concord</em> since our organization was formed in 1982. See also the more detailed
+          %a{:href => "h_church.html", :title => "History of the Church"} History of the Church.
+        %p With the structure in jeopardy, the Society wishes to preserve the historic church building and make the church and community hall the permanent home for the organization. We do this in the hope that the buildings will continue to be an anchor for the architectural cohesion of the hamlet as well as the focal point for the hamlet's "Society", providing a venue for a variety of historical, cultural, philanthropic and social events.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 The Fund to Purchase the New Concord Church Building and Community Hall
+        %p
+          The Society of New Concord has begun a capital campaign to raise $100,000 to purchase the church building and community hall. Generous donations have already been pledged by members of the Board of Directors, members of the Fund Raising Committee, and other members and friends of The Society. The Fund Raising Committee has launched a broader solicitation of support from members and friends of The Society. Money donated in future years will enable us to keep the building open year round for gatherings and events.
+        %p 
+          If you are a member of the New Concord community--as a resident of the hamlet, a previous homeowner, a devotee of historic preservation, an enthusiast of spare authentic architecture, or a person of philanthropic propensity--we hope you will consider making a (tax deductible) donation to this worthy preservation cause.
+        %p
+          Mail contributions [payable to The Society of New Concord] to our postal address:
+        %p
+          The Society of New Concord
+          %br P. O. Box 3
+          %br East Chatham, NY 12060
+        %p or donate on-line [using PayPal].
+        %p Please indicate any special dedication you wish to make with your donation.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Pay Your SNC Dues Online
+        %p You can also pay your annual Society of New Concord dues on line by [using PayPal].
+
+    =partial('footer-partial')

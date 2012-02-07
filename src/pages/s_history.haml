@@ -1,0 +1,34 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+        =partial('tertiarynav-partial', :locals => { :location => @tag, :sub => @sub})
+      .main
+        %h2 Aspirations
+        %p The Society of New Concord was concieved by its initiators as a symbolic bridge to join the New Concord of yesteryear with the New Concord of today. From its earliest days, the Society has had a historical perspective. And those historical underpinnings have continued to inform its activities and projects.
+        %p The Society was also meant to promote or preserve a sense of community in the small locality, and to foster social interaction and enjoyment.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Formation of The Society
+        %p
+          On December 13, 1982, the Society of New Concord was formed at a meeting convened in the Grabow home, adjacent to the green. Initiated by Maurice Arrighi and Frances and Paul Veillette, the resulting organization was titled to resurrect the original name of our hamlet, "the Society of New Concord"&mdash;a designation for the
+          %em settlement
+          used in its earliest records.
+        %p The Society's first Board of Directors consisted of Lewis Grabow, Carol Keith, Maurice Arrighi, Marjorie Epstein, Frederick Finck and Frances Veillette. Its first officers were Lewis Grabow (president), Maurice Arrighi (vice-president), Patricia Keating (treasurer), and Paul Veillette (secretary and historian).
+        %p During the Society's organizing period, December 1982 through February 1983, ninety-five charter members were recruited.
+        %p In this way, the Society was born in the home built by Hosea Beebe, grandson of the founding patriarch of New Concord.
+
+    =partial('footer-partial')

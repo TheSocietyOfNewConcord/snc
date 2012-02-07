@@ -1,0 +1,44 @@
+# "item", "tooltip", "popup information" and "href" for each topmenu item
+#  supplied to rkmenu_helper.rb
+
+- donate:
+   item: Donate
+   tooltip: Donate to the Church/Community Hall Fund; Pay Dues
+   popup: "Donate to the Fund to Purchase&nbsp;\rthe Church/Community Hall;&nbsp;\rPay your Dues Online&nbsp;"
+   ref: donate.html
+   sitemapdesc: Donations/Payments to the Society of New Concord
+
+- faq:
+   item: FAQ
+   tooltip: Frequently-asked Questions
+   popup: Common Questions&hellip;and Some Answers&nbsp;
+   ref: faq.html
+   sitemapdesc: Frequently-asked Questions for the Society of New Concord
+
+- group:
+   item: Google Group
+   tooltip: Link to SNC Google Group
+   popup: "the Society of New Concord&nbsp;\rGoogle Group&mdash;&nbsp;\rannouncements and more&nbsp;"
+   ref: http://groups.google.com/group/SocietyOfNewConcord
+   sitemapdesc: Direct Link to SNC Google Group
+
+- blog:
+   item: Blog
+   tooltip: Link to SNC Blog
+   popup: "the Society of New Concord Blog:&nbsp;\rnews, happenings, gossip&nbsp;\rand more&hellip;pile on!&nbsp;"
+   ref: http://thesocietyofnewconcord.blogspot.com/
+   sitemapdesc: Blog About New Concord and the Society
+
+- sitemap:
+   item: Site Map
+   tooltip: Site Map
+   popup: "A way to Navigate Directly&nbsp;\rto Every Subpage of the Entire&nbsp;\r'Society of New Concord' Site&nbsp;"
+   ref: sitemap.html
+   sitemapdesc: This Page
+
+- contact:
+   item: Contact
+   tooltip: e-Mail, surface-mail, telephone contacts
+   popup: "Ways to Contact Us: e-mail, surface mail, telephone, dues payments&nbsp;"
+   ref: contact.html
+   sitemapdesc: Ways to Contact the Society of New Concord

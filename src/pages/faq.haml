@@ -1,0 +1,59 @@
+!!! Strict
+%html
+  -# current page reference
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+      .main
+        %h2 Who Belongs to the Society of New Concord?
+        %p
+          The 
+          %em Society of New Concord
+          was founded by local citizens, and is still mostly made up of inhabitants of the Hamlet. There are currently active members who have lived in New Concord in the past but have moved a little&mdash;or occasionally a long&mdash;distance away, and still want to participate in Society activities.
+        %p 
+          There are a few 
+          %em relatives
+          of New Concord families who also belong.
+        %p By our bylaws, the Town Historians of the towns of Chatham and Canaan are honorary members of the Society.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 I'm Interested and want to participate; How Can I Join the Society?
+        %p The easiest way to become a New Concord Society member is to show up at one of our functions/meetings, and sign up with the treasurer.
+        %p The next easiest method is to send a dues check and brief demographic information [name, local address, telephone(s), e-mail] to the treasurer&mdash;there is an official form available, too.
+        %p
+          Another approach is to contact the Secretary or one of the other Society officers by phone or e-mail to talk about joining. (see
+          %a{:href => "s_officers.html"} List of Current Officers)
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Who Benefits from the Money Collected as Dues and from Events?
+        %p The Society gets income from dues, from holding events that have an admission fee, from fund-raising events (e.g. raffles, plant sales, tag sales, garden tour), and occasionally from donations, gifts or grants for specific purposes.
+        %p SNC spends money to hold its events (e.g. printing, supplies, tent rental, hall rental, musician fees), to send member mailings, to contribute to heating the community hall (when it was still in use), and to offer scholarships to student of New Concord history. The Society has no paid positions, and no funds are sent by commissions or fees to any officers or members of the Society.
+        %p It is common for volunteer members involved in running events&mdash;in addition to contributing their time, efforts and talents&mdash;to provide materials at their own expense, or to recruit materials from outside sources without "billing" for reimbursement.
+        %p In general, the Society strives&mdash;as befits a truly non-profit society&mdash;to keep cash inflow and outlays comparable. Our bylaws conform with the IRS definition of a non-profit organization, and we live up to the letter and the spirit of those regulations. We usually have enough funds on hand to keep functioning, but don't own an endowment or large stash of cash.
+
+    .element_wrapper
+      .side
+      .main
+        %h2 Who 'Really' Runs the Society?
+        %p 
+          The Society
+          %a{:href => "s_bylaws.html"} bylaws
+          spell it out clearly: the organization is run by a 9-person Board of Directors elected from the membership at large during the Society's Annual Meeting. The Board of Directors then elects four officers (President, Vice-president, Secretary, Treasurer) from their own ranks, and a Historian. The officers and other directors together (often called the Executive Committee) set out the overall course of the Society within the framework of the bylaws, and appoint various committees from the Executive Committee and from the membership at large to actually carry out the various functions of the Society.
+        %p In general, election to the position of Director is a manifestation of interest and willingness to participate and contribute; the seats are seldom hotly contested. Similarly, the choice of Officers&mdash;though elected in an open voting process&mdash;is often closer to an agreeable consensus than to a food fight.
+        %p Over the years, with a very few exceptions, the members of the Executive Committee&mdash;and of the other functioning Committees&mdash;have been open to suggestions, comments, criticisms and especially contributions from the <em>whole</em> New Concord community.
+
+    =partial('footer-partial')

@@ -1,0 +1,39 @@
+!!! Strict
+%html
+  -# current page reference (StaticMaitc)
+  - current = current_page #
+  -# current page name stripped of path and ".html"
+  - @tag = File.basename(current, ".html")
+  -# extract page name's first character: x_pagename; use that for tertiary menu; irrelevant if no tertiary
+  - @sub = @tag[0,1]
+  =partial('head-partial', :locals => { :location => @tag })
+  %body#page
+    =partial('topnav-partial', :locals => { :location => @tag })
+    =partial('logonav-partial', :locals => { :location => @tag })
+    =partial('banner-partial', :locals => { :location => @tag })
+    .element_wrapper
+      .side
+      .main
+        %h2 Purpose, Background, History of the Society of New Concord
+        %p
+          The
+          %em Society of New Concord
+          was founded by local families in the Winter of 1982-83 as a way to recognize, continue and promote the community of the Hamlet of New Concord.
+        %img{:alt => "Autumn Colors in New Concord", :height => "425px", :src => "images/NewConcordFall.jpg", :title => "Autumn Colors in New Concord", :width => "640px"}/
+        %p
+          New Concord was organized as a large geographical entity about 1764, but has been progressively reduced to a smaller area as adjacent towns (e.g. Chatham and New Caanan) have grown. In the present era, we don't have our own Post Office, our own zipcode or any official political entities [more historical detial
+          %a{:href => "h_history.html", :title => "History of the Hamlet"} here
+          ]. Nonetheless, the diminished New Concord of today remains a particularly scenic, cordial piece of the rural New York State countryside&mdash;with its own societal fabric.
+        %p The Society of New Concord continues to be a social and community nexus for New Concord, and strives to be a promoter of local historical preservation, community cohesion, and social enjoyment.
+        %p Society activity&mdash;and community participation in it&mdash;has waxed and waned over the years, but in the past decade, there has been a resurgence of neighbors' involvement that has been reflected in growing membership, increasing participation in events, and an overall expanded sense of community at large.
+
+        %p
+          As delineated in our
+          %a{:href => "s_bylaws.html"} bylaws
+          , the Society holds at least four social events a year. These gatherings serve as pretexts for all kinds of social interactions&mdash;from chats with neighbors to business arrangements to gossipfests to plotting further SNC events&mdash;and can be enjoyed as simple country entertainments as well as ways to keep contact with other New Concord denizens.
+        %p The Society also deliberately fosters historical education and preservation projects&mdash;mostly with the impetus of our Historian, Paul Veillette. We have sponsored historical skits at our social events, have held scholarship competitions for local high school students to review facets of New Concord history, and have been participants in restoration and preservation efforts for local cemeteries of archival interest. Our recent House and Garden Tour, for example, highlighted the historical houses of New Concord and environs. A previous Fall Frolic included a self-guided tour of the Mountain View cemetery, providing background information about graves of individuals who played pivotal roles in New Concord history.
+        %p
+          We are a
+          %em truly
+          non-profit organization, with dues and other contributions just covering the expenses of our ongoing activities. The largest part of what we accomplish is based on the enormously-valuable contributed time of a very talented core of our members.
+    =partial('footer-partial')
